@@ -104,7 +104,8 @@ export default function SiteAudit() {
               <TabsTrigger value="desktop">Desktop</TabsTrigger>
             </TabsList>
             {["mobile", "desktop"].map((type) => {
-              const showData: PageSpeedType = data[type];
+              const showData: PageSpeedType =
+                data[type as "mobile" | "desktop"];
               return (
                 <TabsContent key={type} className={"w-full"} value={type}>
                   <div className={"flex flex-nowrap"}>
