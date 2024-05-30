@@ -20,12 +20,12 @@ export function PlaceholderCarouselInput({
     let interval: any;
     const startAnimation = () => {
       interval = setInterval(() => {
-        setCurrentPlaceholder((prev) => (prev + 1) % placeholders.length);
+        setCurrentPlaceholder((prev) => (prev + 1) % placeholders?.length);
       }, 1500);
     };
     startAnimation();
     return () => clearInterval(interval);
-  }, [placeholders.length]);
+  }, [placeholders?.length]);
 
   const inputRef = useRef<HTMLInputElement>(null);
   const [value, setValue] = useState("");

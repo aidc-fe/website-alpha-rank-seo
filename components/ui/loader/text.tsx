@@ -12,7 +12,7 @@ export default function TextLoader(props: {
     <div
       style={{
         "--font-color": fontColor,
-        "--w": `${children.length}ch`,
+        "--w": `${children?.length}ch`,
       }}
       data-loading-text={children}
       className={cn(styles.loader, className)}
