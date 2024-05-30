@@ -56,7 +56,7 @@ export function PlaceholderCarouselInput({
         value={value}
         type="text"
         className={cn(
-          "w-full relative text-sm sm:text-base z-50 border-none dark:text-white bg-transparent h-full rounded-full focus:outline-none focus:ring-0 pl-4 sm:pl-10 pr-20"
+          "w-full relative text-sm sm:text-base border-none dark:text-white bg-transparent h-full rounded-full focus:outline-none focus:ring-0 pl-4 sm:pl-10 pr-20"
         )}
       />
 
@@ -66,7 +66,7 @@ export function PlaceholderCarouselInput({
         whileTap={{ scale: 0.95, translateY: "-50%" }}
         type="submit"
         disabled={loading}
-        className="absolute font-semibold text-neutral-100 right-2 top-1/2 z-50 h-10 w-28 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-[20px] disabled:cursor-not-allowed disabled:pointer-events-none flex items-center justify-center"
+        className="absolute font-semibold text-neutral-100 right-2 top-1/2 h-10 w-28 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-[20px] disabled:cursor-not-allowed disabled:pointer-events-none flex items-center justify-center"
       >
         {loading ? (
           <TextLoader fontColor="245 245 245" className="pl-2">
