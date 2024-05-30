@@ -1,14 +1,14 @@
-import { AuditType } from "@/pages/api/lighthouse";
-import { Button, Tag } from "antd";
-import cls from "classnames";
+import { AuditType } from "@/pages/api/pageSpeedInsight";
+import { Tag } from "antd";
 import { getColor } from "../../chart/gauge";
 import styles from "./index.module.css";
+import { cn } from "@/utils/cn";
 
 export default function ScrollList(props: { data: AuditType[] }) {
   const { data } = props;
   return (
     <div
-      className={cls(
+      className={cn(
         "mt-8 mb-6 flex-col h-screen overflow-auto sticky",
         styles.list
       )}
@@ -16,15 +16,15 @@ export default function ScrollList(props: { data: AuditType[] }) {
       {data.map((item) => {
         return (
           <div
-            className={cls(
-              "mt-3 relative  cursor-pointer bg-gray-800 rounded-xl p-4",
+            className={cn(
+              "mt-3 relative cursor-pointer bg-white/30 rounded-xl p-4",
               styles.card
             )}
             key={item.id}
           >
             <div
-              className={cls(
-                "absolute z-10 top-0 left-0 w-full h-full opacity-0",
+              className={cn(
+                "absolute z-10 top-0 left-0 w-full h-full rounded-xl opacity-0",
                 styles.overlay
               )}
             />
@@ -32,7 +32,7 @@ export default function ScrollList(props: { data: AuditType[] }) {
             <a
               target="_blank"
               href="https://apps.shopify.com/alpharank-1?locale=zh-CN"
-              className={cls(
+              className={cn(
                 "w-fit px-4 opacity-0 font-semibold top-1/2 left-1/2 z-20 absolute inset-0 flex items-center justify-center bg-gradient-to-r from-indigo-500 to-purple-500 rounded-[20px]",
                 styles.cardBtn
               )}

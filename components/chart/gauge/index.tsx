@@ -8,7 +8,8 @@ const ReactECharts = dynamic(() => import("echarts-for-react"), { ssr: false });
 
 interface GaugeChartProps {
   value: number;
-  name: string;
+  name?: string;
+  className?: string;
 }
 
 export const getColor = (score: number) => {
@@ -16,7 +17,11 @@ export const getColor = (score: number) => {
   if (score >= 50) return "#ffc108";
   return "#ff4d4d";
 };
-const GaugeChart: React.FC<GaugeChartProps> = ({ value, name }) => {
+const GaugeChart: React.FC<GaugeChartProps> = ({
+  value,
+  name = "",
+  className = "",
+}) => {
   const color = getColor(value);
   const backgroundColor = getColorWithAlpha(color, 0.16); // 透明度为 20%
 
@@ -29,21 +34,18 @@ const GaugeChart: React.FC<GaugeChartProps> = ({ value, name }) => {
 
   // ECharts 配置
   const options = {
-    title: {
-      subtext: name,
-      subtextStyle: {
-        fontWeight: "bold",
-        fontSize: 16,
-        align: "center",
-        verticalAlign: "bottom",
-        lineHeight: 30,
-      },
-      left: "center",
-      bottom: 60,
-    },
-    tooltip: {
-      formatter: "{a} <br/>{b} : {c}",
-    },
+    // title: {
+    //   subtext: name,
+    //   subtextStyle: {
+    //     fontWeight: "bold",
+    //     fontSize: 16,
+    //     align: "center",
+    //     verticalAlign: "bottom",
+    //     lineHeight: 30,
+    //   },
+    //   left: "center",
+    //   bottom: 20,
+    // },
     series: [
       {
         name,
@@ -52,7 +54,7 @@ const GaugeChart: React.FC<GaugeChartProps> = ({ value, name }) => {
         type: "gauge",
         progress: {
           show: true,
-          width: 18,
+          width: 12,
           roundCap: true,
         },
         pointer: {
@@ -64,7 +66,7 @@ const GaugeChart: React.FC<GaugeChartProps> = ({ value, name }) => {
         axisLine: {
           roundCap: true,
           lineStyle: {
-            width: 18,
+            width: 12,
             color: [[1, backgroundColor]],
           },
         },
@@ -81,6 +83,8 @@ const GaugeChart: React.FC<GaugeChartProps> = ({ value, name }) => {
           valueAnimation: true,
           formatter: "{value}",
           color: color,
+          fontSize: 24,
+          offsetCenter: [0, "70%"], // 调整详细值的位置
         },
         data: [{ value }],
       },
@@ -88,7 +92,11 @@ const GaugeChart: React.FC<GaugeChartProps> = ({ value, name }) => {
   };
 
   return (
-    <ReactECharts option={options} style={{ height: "400px", width: "100%" }} />
+    <ReactECharts
+      option={options}
+      className={className}
+      style={{ height: "100%", width: "100%" }}
+    />
   );
 };
 

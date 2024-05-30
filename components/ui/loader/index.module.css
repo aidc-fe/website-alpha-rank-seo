@@ -1,0 +1,144 @@
+.loader {
+  letter-spacing: var(--w);
+  width: var(--w);
+  overflow: hidden;
+  color: #0000;
+  text-shadow: calc(0 * var(--w)) 0 rgb(var(--font-color)),
+    calc(-1 * var(--w)) 0 rgb(var(--font-color)),
+    calc(-2 * var(--w)) 0 rgb(var(--font-color)),
+    calc(-3 * var(--w)) 0 rgb(var(--font-color)),
+    calc(-4 * var(--w)) 0 rgb(var(--font-color)),
+    calc(-5 * var(--w)) 0 rgb(var(--font-color)),
+    calc(-6 * var(--w)) 0 rgb(var(--font-color)),
+    calc(-7 * var(--w)) 0 rgb(var(--font-color)),
+    calc(-8 * var(--w)) 0 rgb(var(--font-color)),
+    calc(-9 * var(--w)) 0 rgb(var(--font-color));
+  animation: l20 2s infinite linear;
+}
+
+.loader:before {
+  content: attr(data-loading-text);
+}
+
+@keyframes l20 {
+  9.09% {
+    text-shadow: calc(0 * var(--w)) -10px rgb(var(--font-color)),
+      calc(-1 * var(--w)) 0 rgb(var(--font-color)),
+      calc(-2 * var(--w)) 0 rgb(var(--font-color)),
+      calc(-3 * var(--w)) 0 rgb(var(--font-color)),
+      calc(-4 * var(--w)) 0 rgb(var(--font-color)),
+      calc(-5 * var(--w)) 0 rgb(var(--font-color)),
+      calc(-6 * var(--w)) 0 rgb(var(--font-color)),
+      calc(-7 * var(--w)) 0 rgb(var(--font-color)),
+      calc(-8 * var(--w)) 0 rgb(var(--font-color)),
+      calc(-9 * var(--w)) 0 rgb(var(--font-color));
+  }
+  18.18% {
+    text-shadow: calc(0 * var(--w)) 0 rgb(var(--font-color)),
+      calc(-1 * var(--w)) -10px rgb(var(--font-color)),
+      calc(-2 * var(--w)) 0 rgb(var(--font-color)),
+      calc(-3 * var(--w)) 0 rgb(var(--font-color)),
+      calc(-4 * var(--w)) 0 rgb(var(--font-color)),
+      calc(-5 * var(--w)) 0 rgb(var(--font-color)),
+      calc(-6 * var(--w)) 0 rgb(var(--font-color)),
+      calc(-7 * var(--w)) 0 rgb(var(--font-color)),
+      calc(-8 * var(--w)) 0 rgb(var(--font-color)),
+      calc(-9 * var(--w)) 0 rgb(var(--font-color));
+  }
+  27.27% {
+    text-shadow: calc(0 * var(--w)) 0 rgb(var(--font-color)),
+      calc(-1 * var(--w)) 0 rgb(var(--font-color)),
+      calc(-2 * var(--w)) -10px rgb(var(--font-color)),
+      calc(-3 * var(--w)) 0 rgb(var(--font-color)),
+      calc(-4 * var(--w)) 0 rgb(var(--font-color)),
+      calc(-5 * var(--w)) 0 rgb(var(--font-color)),
+      calc(-6 * var(--w)) 0 rgb(var(--font-color)),
+      calc(-7 * var(--w)) 0 rgb(var(--font-color)),
+      calc(-8 * var(--w)) 0 rgb(var(--font-color)),
+      calc(-9 * var(--w)) 0 rgb(var(--font-color));
+  }
+  36.36% {
+    text-shadow: calc(0 * var(--w)) 0 rgb(var(--font-color)),
+      calc(-1 * var(--w)) 0 rgb(var(--font-color)),
+      calc(-2 * var(--w)) 0 rgb(var(--font-color)),
+      calc(-3 * var(--w)) -10px rgb(var(--font-color)),
+      calc(-4 * var(--w)) 0 rgb(var(--font-color)),
+      calc(-5 * var(--w)) 0 rgb(var(--font-color)),
+      calc(-6 * var(--w)) 0 rgb(var(--font-color)),
+      calc(-7 * var(--w)) 0 rgb(var(--font-color)),
+      calc(-8 * var(--w)) 0 rgb(var(--font-color)),
+      calc(-9 * var(--w)) 0 rgb(var(--font-color));
+  }
+  45.45% {
+    text-shadow: calc(0 * var(--w)) 0 rgb(var(--font-color)),
+      calc(-1 * var(--w)) 0 rgb(var(--font-color)),
+      calc(-2 * var(--w)) 0 rgb(var(--font-color)),
+      calc(-3 * var(--w)) 0 rgb(var(--font-color)),
+      calc(-4 * var(--w)) -10px rgb(var(--font-color)),
+      calc(-5 * var(--w)) 0 rgb(var(--font-color)),
+      calc(-6 * var(--w)) 0 rgb(var(--font-color)),
+      calc(-7 * var(--w)) 0 rgb(var(--font-color)),
+      calc(-8 * var(--w)) 0 rgb(var(--font-color)),
+      calc(-9 * var(--w)) 0 rgb(var(--font-color));
+  }
+  54.54% {
+    text-shadow: calc(0 * var(--w)) 0 rgb(var(--font-color)),
+      calc(-1 * var(--w)) 0 rgb(var(--font-color)),
+      calc(-2 * var(--w)) 0 rgb(var(--font-color)),
+      calc(-3 * var(--w)) 0 rgb(var(--font-color)),
+      calc(-4 * var(--w)) 0 rgb(var(--font-color)),
+      calc(-5 * var(--w)) -10px rgb(var(--font-color)),
+      calc(-6 * var(--w)) 0 rgb(var(--font-color)),
+      calc(-7 * var(--w)) 0 rgb(var(--font-color)),
+      calc(-8 * var(--w)) 0 rgb(var(--font-color)),
+      calc(-9 * var(--w)) 0 rgb(var(--font-color));
+  }
+  63.63% {
+    text-shadow: calc(0 * var(--w)) 0 rgb(var(--font-color)),
+      calc(-1 * var(--w)) 0 rgb(var(--font-color)),
+      calc(-2 * var(--w)) 0 rgb(var(--font-color)),
+      calc(-3 * var(--w)) 0 rgb(var(--font-color)),
+      calc(-4 * var(--w)) 0 rgb(var(--font-color)),
+      calc(-5 * var(--w)) 0 rgb(var(--font-color)),
+      calc(-6 * var(--w)) -10px rgb(var(--font-color)),
+      calc(-7 * var(--w)) 0 rgb(var(--font-color)),
+      calc(-8 * var(--w)) 0 rgb(var(--font-color)),
+      calc(-9 * var(--w)) 0 rgb(var(--font-color));
+  }
+  72.72% {
+    text-shadow: calc(0 * var(--w)) 0 rgb(var(--font-color)),
+      calc(-1 * var(--w)) 0 rgb(var(--font-color)),
+      calc(-2 * var(--w)) 0 rgb(var(--font-color)),
+      calc(-3 * var(--w)) 0 rgb(var(--font-color)),
+      calc(-4 * var(--w)) 0 rgb(var(--font-color)),
+      calc(-5 * var(--w)) 0 rgb(var(--font-color)),
+      calc(-6 * var(--w)) 0 rgb(var(--font-color)),
+      calc(-7 * var(--w)) -10px rgb(var(--font-color)),
+      calc(-8 * var(--w)) 0 rgb(var(--font-color)),
+      calc(-9 * var(--w)) 0 rgb(var(--font-color));
+  }
+  81.81% {
+    text-shadow: calc(0 * var(--w)) 0 rgb(var(--font-color)),
+      calc(-1 * var(--w)) 0 rgb(var(--font-color)),
+      calc(-2 * var(--w)) 0 rgb(var(--font-color)),
+      calc(-3 * var(--w)) 0 rgb(var(--font-color)),
+      calc(-4 * var(--w)) 0 rgb(var(--font-color)),
+      calc(-5 * var(--w)) 0 rgb(var(--font-color)),
+      calc(-6 * var(--w)) 0 rgb(var(--font-color)),
+      calc(-7 * var(--w)) 0 rgb(var(--font-color)),
+      calc(-8 * var(--w)) -10px rgb(var(--font-color)),
+      calc(-9 * var(--w)) 0 rgb(var(--font-color));
+  }
+  90.90% {
+    text-shadow: calc(0 * var(--w)) 0 rgb(var(--font-color)),
+      calc(-1 * var(--w)) 0 rgb(var(--font-color)),
+      calc(-2 * var(--w)) 0 rgb(var(--font-color)),
+      calc(-3 * var(--w)) 0 rgb(var(--font-color)),
+      calc(-4 * var(--w)) 0 rgb(var(--font-color)),
+      calc(-5 * var(--w)) 0 rgb(var(--font-color)),
+      calc(-6 * var(--w)) 0 rgb(var(--font-color)),
+      calc(-7 * var(--w)) 0 rgb(var(--font-color)),
+      calc(-8 * var(--w)) 0 rgb(var(--font-color)),
+      calc(-9 * var(--w)) -10px rgb(var(--font-color));
+  }
+}
