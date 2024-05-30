@@ -55,13 +55,12 @@ export async function GET(request: NextRequest) {
   });
   const apiUrl = `https://www.googleapis.com/pagespeedonline/v5/runPagespeed?${params.toString()}`;
   const res = await fetch(apiUrl, {});
-  console.log(apiUrl, res);
 
   const data = await res.json();
   const { audits, categories, fullPageScreenshot } =
     data?.lighthouseResult ?? {};
   const { description, score, auditRefs } = categories?.seo ?? {};
-  const list = auditRefs.map((ref: { id: string }) => {
+  const list = auditRefs?.map((ref: { id: string }) => {
     return {
       ...audits?.[ref.id],
       ...ref,
