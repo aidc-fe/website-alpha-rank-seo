@@ -72,7 +72,7 @@ export const columns: ColumnDef<PageSpeedInsightItemType>[] = [
 ];
 
 export function DetailTable({
-  data,
+  data = [],
   className,
 }: {
   data: PageSpeedInsightItemType[];
