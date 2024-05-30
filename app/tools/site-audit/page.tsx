@@ -7,7 +7,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { placeholders } from "./constants";
 import { cn } from "@/utils/cn";
-import { handleGet, saveDataToFile } from "@/utils/utils";
+import { handleGet } from "@/utils/utils";
 import Image from "next/image";
 import {
   Tabs,
@@ -70,9 +70,9 @@ export default function SiteAudit() {
           Site Audit
         </div>
         <div className="w-4/5 text-center font-extralight text-base md:text-2xl dark:text-neutral-200 py-4">
-          Identify your website's SEO issues with Site Audit, boosting your
+          {`Identify your website's SEO issues with Site Audit, boosting your
           site's Google rankings and organic visibility. Enhance your website's
-          performance effortlessly.
+          performance effortlessly.`}
         </div>
         <PlaceholderCarouselInput
           placeholders={placeholders}
