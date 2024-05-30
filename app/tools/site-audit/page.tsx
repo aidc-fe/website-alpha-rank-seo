@@ -33,7 +33,7 @@ export default function SiteAudit() {
   const onSubmit = (url: string) => {
     return Promise.all([
       handleGet(`/api/google/pageSpeedInsight`, { url, strategy: "mobile" }),
-      handleGet(`/api/google/pageSpeedInsight`, { url }),
+      handleGet(`/api/google/pageSpeedInsight`, { url, strategy: "desktop" }),
     ]).then((res) => {
       setData({ mobile: res[0], desktop: res[1] });
       // saveDataToFile(
