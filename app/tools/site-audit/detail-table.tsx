@@ -58,7 +58,7 @@ export const columns: ColumnDef<PageSpeedInsightItemType>[] = [
     header: "Optimize",
     cell: () => {
       return (
-        <Button variant="secondary" asChild>
+        <Button asChild>
           <Link
             target="_blank"
             href="https://apps.shopify.com/alpharank-1?locale=zh-CN"

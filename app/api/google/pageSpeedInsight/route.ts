@@ -1,13 +1,23 @@
 import { NextRequest, NextResponse } from "next/server";
 
-const formatUrl = (rawUrl: string) => {
-  const url = encodeURIComponent(rawUrl);
-  if (!/^https?:\/\//i.test(url)) {
-    return "https://" + url;
-  } else {
-    return url;
+function formatForPageSpeed(url: string) {
+  try {
+    let formattedUrl = url.trim();
+
+    // Prepend 'https://' if the URL doesn't start with 'http://' or 'https://'
+    if (!/^https?:\/\//i.test(formattedUrl)) {
+      formattedUrl = "https://" + formattedUrl;
+    }
+
+    // Encode the URL
+    formattedUrl = encodeURIComponent(formattedUrl);
+
+    return formattedUrl;
+  } catch (error) {
+    console.error("Invalid URL:", error);
+    return null;
   }
-};
+}
 
 export type PageSpeedInsightItemType = {
   id: string;
@@ -49,13 +59,13 @@ export async function GET(request: NextRequest) {
 
   const params = new URLSearchParams({
     key: apiKey,
-    url: formatUrl(url),
+    url: formatForPageSpeed(url!),
     category: "seo",
     strategy,
   });
   const apiUrl = `https://www.googleapis.com/pagespeedonline/v5/runPagespeed?${params.toString()}`;
   const res = await fetch(apiUrl, {});
-
+  console.log(apiUrl);
   const data = await res.json();
   const { audits, categories, fullPageScreenshot } =
     data?.lighthouseResult ?? {};
@@ -72,5 +82,6 @@ export async function GET(request: NextRequest) {
     score,
     list,
     screenshot: fullPageScreenshot?.screenshot?.data,
+    data,
   });
 }
