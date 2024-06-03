@@ -4,7 +4,6 @@ export const handleGet = (url: string, params: { [key: string]: string }) => {
 
   return fetch(`${url}?${SearchParams.toString()}`)
     .then((response) => {
-      console.log(`${url}?${SearchParams.toString()}`, response);
       if (!response.ok) {
         throw new Error(`Error: ${response.statusText}`);
       }

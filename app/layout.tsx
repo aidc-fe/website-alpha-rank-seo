@@ -4,7 +4,9 @@ import { ThemeProvider } from "@/components/shadcn/theme/provider";
 import Header from "@/components/layout/header";
 import "./globals.css";
 
-import { cn } from "@/utils/cn";
+import Script from "next/script";
+import { cn } from "@/lib/utils";
+import GoogleApi from "@/components/layout/google-api";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -23,6 +25,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <GoogleApi />
+      </head>
       <body
         className={cn(
           "bg-background font-sans antialiased flex flex-col h-screen",
@@ -37,7 +42,7 @@ export default function RootLayout({
         >
           <Header />
 
-          <main className={"grow"}>{children}</main>
+          <main className={"grow max-w-[1440px] self-center"}>{children}</main>
         </ThemeProvider>
       </body>
     </html>
