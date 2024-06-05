@@ -10,10 +10,10 @@ const ROCKET_LIST = [
             y2="87.2721319%"
             id="linearGradient-1"
           >
-            <stop stop-color="#3977FF" stop-opacity="0" offset="0%"></stop>
-            <stop stop-color="#6F2FFF" offset="47.5487469%"></stop>
-            <stop stop-color="#A53DED" offset="78.8324725%"></stop>
-            <stop stop-color="#EE50D5" offset="100%"></stop>
+            <stop stopColor="#3977FF" stopOpacity="0" offset="0%"></stop>
+            <stop stopColor="#6F2FFF" offset="47.5487469%"></stop>
+            <stop stopColor="#A53DED" offset="78.8324725%"></stop>
+            <stop stopColor="#EE50D5" offset="100%"></stop>
           </linearGradient>
           <circle
             id="path-rocket-1"
@@ -60,8 +60,8 @@ const ROCKET_LIST = [
             y2="44.5142904%"
             id="linearGradient-4"
           >
-            <stop stop-color="#F2F1FA" stop-opacity="0" offset="0%"></stop>
-            <stop stop-color="#F2F1FA" offset="93%"></stop>
+            <stop stopColor="#F2F1FA" stopOpacity="0" offset="0%"></stop>
+            <stop stopColor="#F2F1FA" offset="93%"></stop>
           </linearGradient>
           <radialGradient
             cx="48.2885659%"
@@ -72,33 +72,33 @@ const ROCKET_LIST = [
             gradientTransform="translate(0.4829, 0), scale(0.2006, 1), rotate(90), scale(1, 2.2084), translate(-0.4829, -0)"
             id="radialGradient-5"
           >
-            <stop stop-color="#FFFFFF" stop-opacity="0" offset="0%"></stop>
+            <stop stopColor="#FFFFFF" stopOpacity="0" offset="0%"></stop>
             <stop
-              stop-color="#FFFFFF"
-              stop-opacity="0"
+              stopColor="#FFFFFF"
+              stopOpacity="0"
               offset="50.9002606%"
             ></stop>
-            <stop stop-color="#FFFFFF" offset="100%"></stop>
+            <stop stopColor="#FFFFFF" offset="100%"></stop>
           </radialGradient>
         </defs>
-        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
           <g transform="translate(-398, -9165)">
             <g transform="translate(398.8513, 9165.431)">
               <g>
                 <use
-                  fill-opacity="0.6"
+                  fillOpacity="0.6"
                   fill="url(#linearGradient-1)"
-                  fill-rule="evenodd"
+                  fillRule="evenodd"
                   xlinkHref="#path-rocket-1"
                 ></use>
                 <use
                   fill="black"
-                  fill-opacity="1"
+                  fillOpacity="1"
                   filter="url(#filter-3)"
                   xlinkHref="#path-rocket-1"
                 ></use>
               </g>
-              <g transform="translate(136.1487, 45.569)" fill-rule="nonzero">
+              <g transform="translate(136.1487, 45.569)" fillRule="nonzero">
                 <path
                   d="M26.8513261,26.6640782 L16.1467387,52 C16.1467387,52 -5.18771045,40.4126865 1.19008513,29.2644431 C1.3067299,29.0588951 1.42823487,28.857604 1.55460003,28.6660429 C1.5588527,28.656921 7.1438284,23.8903962 7.1438284,23.8903962 C15.5392139,20.4204051 26.8513261,26.6640782 26.8513261,26.6640782 Z"
                   fill="url(#linearGradient-4)"
@@ -110,7 +110,7 @@ const ROCKET_LIST = [
               </g>
               <ellipse
                 stroke="url(#radialGradient-5)"
-                stroke-width="2"
+                strokeWidth="2"
                 transform="translate(159.8032, 71.0613) rotate(-15) translate(-159.8032, -71.0613)"
                 cx="159.803155"
                 cy="71.0612536"
@@ -142,10 +142,10 @@ const ROCKET_LIST = [
             y2="87.2721319%"
             id="linearGradient-1"
           >
-            <stop stop-color="#3977FF" stop-opacity="0" offset="0%"></stop>
-            <stop stop-color="#6F2FFF" offset="47.5487469%"></stop>
-            <stop stop-color="#A53DED" offset="78.8324725%"></stop>
-            <stop stop-color="#EE50D5" offset="100%"></stop>
+            <stop stopColor="#3977FF" stopOpacity="0" offset="0%"></stop>
+            <stop stopColor="#6F2FFF" offset="47.5487469%"></stop>
+            <stop stopColor="#A53DED" offset="78.8324725%"></stop>
+            <stop stopColor="#EE50D5" offset="100%"></stop>
           </linearGradient>
           <circle id="path-rocket-2" cx="113" cy="111" r="60"></circle>
           <filter
@@ -188,28 +188,28 @@ const ROCKET_LIST = [
             y2="44.5142904%"
             id="linearGradient-4"
           >
-            <stop stop-color="#F2F1FA" stop-opacity="0" offset="0%"></stop>
-            <stop stop-color="#F2F1FA" offset="93%"></stop>
+            <stop stopColor="#F2F1FA" stopOpacity="0" offset="0%"></stop>
+            <stop stopColor="#F2F1FA" offset="93%"></stop>
           </linearGradient>
         </defs>
-        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
           <g transform="translate(-849, -9126)">
             <g transform="translate(849, 9126)">
               <g>
                 <use
-                  fill-opacity="0.6"
+                  fillOpacity="0.6"
                   fill="url(#linearGradient-1)"
-                  fill-rule="evenodd"
+                  fillRule="evenodd"
                   xlinkHref="#path-rocket-2"
                 ></use>
                 <use
                   fill="black"
-                  fill-opacity="1"
+                  fillOpacity="1"
                   filter="url(#filter-3)"
                   xlinkHref="#path-rocket-2"
                 ></use>
               </g>
-              <g transform="translate(92, 85)" fill-rule="nonzero">
+              <g transform="translate(92, 85)" fillRule="nonzero">
                 <path
                   d="M26.8513261,26.6640782 L16.1467387,52 C16.1467387,52 -5.18771045,40.4126865 1.19008513,29.2644431 C1.3067299,29.0588951 1.42823487,28.857604 1.55460003,28.6660429 C1.5588527,28.656921 7.1438284,23.8903962 7.1438284,23.8903962 C15.5392139,20.4204051 26.8513261,26.6640782 26.8513261,26.6640782 Z"
                   fill="url(#linearGradient-4)"
@@ -221,7 +221,7 @@ const ROCKET_LIST = [
               </g>
               <circle
                 stroke="#FFFFFF"
-                stroke-width="2"
+                strokeWidth="2"
                 cx="111"
                 cy="111"
                 r="110"
@@ -245,10 +245,10 @@ const ROCKET_LIST = [
             y2="87.2721319%"
             id="linearGradient-1"
           >
-            <stop stop-color="#3977FF" stop-opacity="0" offset="0%"></stop>
-            <stop stop-color="#6F2FFF" offset="47.5487469%"></stop>
-            <stop stop-color="#A53DED" offset="78.8324725%"></stop>
-            <stop stop-color="#EE50D5" offset="100%"></stop>
+            <stop stopColor="#3977FF" stopOpacity="0" offset="0%"></stop>
+            <stop stopColor="#6F2FFF" offset="47.5487469%"></stop>
+            <stop stopColor="#A53DED" offset="78.8324725%"></stop>
+            <stop stopColor="#EE50D5" offset="100%"></stop>
           </linearGradient>
           <circle
             id="path-rocket-3"
@@ -296,8 +296,8 @@ const ROCKET_LIST = [
             y2="44.5142904%"
             id="linearGradient-4"
           >
-            <stop stop-color="#F2F1FA" stop-opacity="0" offset="0%"></stop>
-            <stop stop-color="#F2F1FA" offset="93%"></stop>
+            <stop stopColor="#F2F1FA" stopOpacity="0" offset="0%"></stop>
+            <stop stopColor="#F2F1FA" offset="93%"></stop>
           </linearGradient>
           <linearGradient
             x1="50%"
@@ -306,28 +306,28 @@ const ROCKET_LIST = [
             y2="39.6299964%"
             id="linearGradient-5"
           >
-            <stop stop-color="#FFFFFF" stop-opacity="0" offset="0%"></stop>
-            <stop stop-color="#FFFFFF" offset="100%"></stop>
+            <stop stopColor="#FFFFFF" stopOpacity="0" offset="0%"></stop>
+            <stop stopColor="#FFFFFF" offset="100%"></stop>
           </linearGradient>
         </defs>
-        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
           <g transform="translate(-1236, -9173)">
             <g transform="translate(1236.1405, 9173.4621)">
               <g>
                 <use
-                  fill-opacity="0.6"
+                  fillOpacity="0.6"
                   fill="url(#linearGradient-1)"
-                  fill-rule="evenodd"
+                  fillRule="evenodd"
                   xlinkHref="#path-rocket-3"
                 ></use>
                 <use
                   fill="black"
-                  fill-opacity="1"
+                  fillOpacity="1"
                   filter="url(#filter-3)"
                   xlinkHref="#path-rocket-3"
                 ></use>
               </g>
-              <g transform="translate(110.8595, 37.5379)" fill-rule="nonzero">
+              <g transform="translate(110.8595, 37.5379)" fillRule="nonzero">
                 <path
                   d="M26.8513261,26.6640782 L16.1467387,52 C16.1467387,52 -5.18771045,40.4126865 1.19008513,29.2644431 C1.3067299,29.0588951 1.42823487,28.857604 1.55460003,28.6660429 C1.5588527,28.656921 7.1438284,23.8903962 7.1438284,23.8903962 C15.5392139,20.4204051 26.8513261,26.6640782 26.8513261,26.6640782 Z"
                   fill="url(#linearGradient-4)"
@@ -339,7 +339,7 @@ const ROCKET_LIST = [
               </g>
               <ellipse
                 stroke="url(#linearGradient-5)"
-                stroke-width="2"
+                strokeWidth="2"
                 transform="translate(129.8595, 63.0379) scale(-1, 1) rotate(-15) translate(-129.8595, -63.0379)"
                 cx="129.859454"
                 cy="63.0378632"
