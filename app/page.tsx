@@ -1,6 +1,7 @@
 import { Button } from "@/components/shadcn/button";
 import { Input } from "@/components/shadcn/input";
-import { KEY_BLOCK } from "@/constants/home";
+import HoverGlowCard from "@/components/ui/hover-glow-card";
+import { KEY_BLOCK, TRUSTED_ARR } from "@/constants/home";
 import { cn } from "@/lib/utils";
 
 const FadeTitle =
@@ -8,7 +9,7 @@ const FadeTitle =
 
 export default function Home() {
   return (
-    <div className={"flex flex-col items-center "}>
+    <div className={"flex flex-col items-center pb-72"}>
       <div></div>
       <h1 className={cn("text-6xl/normal font-black text-center", FadeTitle)}>
         AlphaRank: Elevating Content, Driving Traffic
@@ -44,7 +45,8 @@ export default function Home() {
         Trusted by 15,000+ Content
         <br /> Creators,SEOs,Agencies,and Teams
       </h3>
-      <div></div>
+
+      <ul className={"flex gap-14 mt-11 item-center"}>{TRUSTED_ARR}</ul>
 
       <ul>
         {KEY_BLOCK.map((item) => {
@@ -55,7 +57,7 @@ export default function Home() {
               <h2 className={cn("text-5xl/normal font-bold", FadeTitle)}>
                 {title}
               </h2>
-              <div className="text-xl opacity-50">{desc}</div>
+              <div className="text-xl mb-12">{desc}</div>
               {Comp ? <Comp /> : <></>}
             </li>
           );
