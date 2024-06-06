@@ -3,6 +3,7 @@ import MarketInsight from "@/components/home/market-insight";
 import { RocketList } from "@/components/home/rocket-list";
 import SeoEnhancementBlock from "@/components/home/seo-enhancement-block";
 import SiteDiagnostics from "@/components/home/site-diagnositics";
+import SuccessStoryList from "@/components/home/success-story-list";
 import ToolsCardList from "@/components/home/tools-card-list";
 import TrafficAcceleratorBlock from "@/components/home/traffic-accelerator-block";
 import { WhyChooseList } from "@/components/home/why-choose-list";
@@ -165,10 +166,11 @@ export const KEY_BLOCK = [
     desc: "Optimize user pathways to drive traffic flow and surge conversion rates",
     Comp: TrafficAcceleratorBlock,
   },
-  {
-    title: "Become our next success story",
-    desc: "See what our customers say about the products",
-  },
+  // {
+  //   title: "Become our next success story",
+  //   desc: "See what our customers say about the products",
+  //   Comp: SuccessStoryList,
+  // },
   {
     title: "10, 100+ Users Can’t be Wrong",
     desc: "Discover why they adore AlphaRank",

@@ -59,6 +59,9 @@ dependencies:
   less:
     specifier: ^4.2.0
     version: 4.2.0
+  lucide-react:
+    specifier: ^0.383.0
+    version: 0.383.0(react@18.3.1)
   next:
     specifier: ^14.2.3
     version: 14.2.3(react-dom@18.3.1)(react@18.3.1)
@@ -2763,6 +2766,14 @@ packages:
   /lru-cache@10.2.2:
     resolution: {integrity: sha512-9hp3Vp2/hFQUiIwKo8XCeFVnrg8Pk3TYNPIR7tJADKi5YfcF7vEaK7avFHTlSy3kOKYaJQaalfEo6YuXdceBOQ==}
     engines: {node: 14 || >=16.14}
+
+  /lucide-react@0.383.0(react@18.3.1):
+    resolution: {integrity: sha512-13xlG0CQCJtzjSQYwwJ3WRqMHtRj3EXmLlorrARt7y+IHnxUCp3XyFNL1DfaGySWxHObDvnu1u1dV+0VMKHUSg==}
+    peerDependencies:
+      react: ^16.5.1 || ^17.0.0 || ^18.0.0
+    dependencies:
+      react: 18.3.1
+    dev: false
 
   /make-dir@2.1.0:
     resolution: {integrity: sha512-LS9X+dc8KLxXCb8dni79fLIIUA5VyZoyjSMCwTluaXA0o27cCK0bhXkpgw+sTXVpPy/lSO57ilRixqk0vDmtRA==}

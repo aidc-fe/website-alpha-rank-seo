@@ -4,7 +4,6 @@ import { ThemeProvider } from "@/components/shadcn/theme/provider";
 import Header from "@/components/layout/header";
 import "./globals.css";
 
-import Script from "next/script";
 import { cn } from "@/lib/utils";
 import GoogleApi from "@/components/layout/google-api";
 
@@ -34,7 +33,7 @@ export default function RootLayout({
       </head>
       <body
         className={cn(
-          "bg-background font-sans antialiased flex flex-col h-screen",
+          "bg-background font-sans antialiased flex flex-col",
           fontSans.variable
         )}
       >
@@ -45,8 +44,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Header />
-
-          <main className={"grow max-w-[1440px] self-center"}>{children}</main>
+          <main>{children}</main>
         </ThemeProvider>
       </body>
     </html>
