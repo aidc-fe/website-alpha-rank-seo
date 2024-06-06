@@ -21,6 +21,9 @@ const config = {
     },
     extend: {
       colors: {
+        'white-15': 'rgba(255,255,255,0.15)',
+        second: '#595959',
+        third: '#191919',
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -92,16 +95,39 @@ const config = {
           "linear-gradient(to var(--direction), hsl(var(--background)) 0%, rgba(16, 13, 38, 0) 100%)",
         "display-card-primary-gradient":
           "linear-gradient(180deg, rgba(81,80,232,0.30) 0%, #A188F5 100%)",
+        "card-main":
+          "radial-gradient(circle at 1.3e+02% 1.5e+02%, rgba(64,213,255,0.00) 0%, rgba(255,255,255,0.50) 169%), radial-gradient(circle at 19% -5.4%, rgba(147,120,255,0.54) 0%, rgba(147,120,255,0.54) 24%, rgba(255,255,255,0.00) 79%)",
+        "box-gradient":
+          "linear-gradient(180deg, #E3DEFB 0%, #ECE7FE 100%)",
+        "metadata-gradient":
+          "linear-gradient(146deg, #FFFFFF 43%, #E1C3FA 100%)"
       },
       boxShadow: {
         "main-gradient":
           "0 0 54px 0 rgba(113,101,255,0.40), inset 0 -5px 20px 0 rgba(255,255,255,0.80)",
         "table-gradient": 
-          "-28px 28px 42px 0 rgba(0,0,0,0.08)"
+          "-28px 28px 42px 0 rgba(0,0,0,0.08)",
+        "box-gradient":
+          "0 0 4px 0 rgba(111,80,232,0.24)"
+      },
+      backgroundColor: {
+        'white-50': 'rgba(255, 255, 255, 0.5)',
+      },
+      backdropBlur: {
+        'custom-blur': '10px',
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [require("tailwindcss-animate"), function ({ addUtilities }) {
+    addUtilities({
+      '.line-clamp-2': {
+        display: '-webkit-box',
+        '-webkit-box-orient': 'vertical',
+        '-webkit-line-clamp': '2',
+        overflow: 'hidden',
+      },
+    });
+  },],
 } satisfies Config;
 
 export default config;

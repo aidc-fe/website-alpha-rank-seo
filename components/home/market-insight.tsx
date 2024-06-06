@@ -178,7 +178,7 @@ export default function MarketInsight() {
             <div className="flex justify-between">
               <div className="w-[182px] h-[262px] rounded-lg border border-[#F0F0F0]">
                 <div className="flex py-3.5 px-4">
-                  <Image src="" width={18} height={18} alt="" />
+                  <Image src="https://img.alicdn.com/imgextra/i3/O1CN01MP51ep1r5Ec6FZP1z_!!6000000005579-55-tps-18-18.svg" width={18} height={18} alt="" />
                   <div className="text-sm font-bold text-title-color ml-1">Website A</div>
                 </div>
                 <div className="px-4 text-xs font-medium text-gray-500 bg-gray-100 leading-7">keywords</div>
@@ -191,15 +191,15 @@ export default function MarketInsight() {
               </div>
               <div className="w-[182px] h-[262px] rounded-lg border border-[#F0F0F0]">
                 <div className="flex py-3.5 px-4">
-                  <Image src="" width={18} height={18} alt="" />
+                  <Image src="https://img.alicdn.com/imgextra/i1/O1CN01AkOcHw1qmSNJrpiFb_!!6000000005538-55-tps-18-18.svg" width={18} height={18} alt="" />
                   <div className="text-sm font-bold text-title-color ml-1">Website A</div>
                 </div>
                 <div className="px-4 text-xs font-medium text-gray-500 bg-gray-100 leading-7">keywords</div>
                 <div className="flex flex-col p-3.5 gap-1.5">
-                  <div className="text-xs leading-5 px-4 py-2 text-neutral-800 rounded-lg border border-[#F0F0F0]">Transform</div>
-                  <div className="text-xs leading-5 px-4 py-2 text-neutral-800 rounded-lg border border-[#F0F0F0]">Transform</div>
-                  <div className="text-xs leading-5 px-4 py-2 text-neutral-800 rounded-lg border border-[#F0F0F0]">Transform</div>
-                  <div className="text-xs leading-5 px-4 py-2 text-neutral-800 rounded-lg border border-[#F0F0F0]">Transform</div>
+                  <div className="text-xs leading-[18px] px-4 py-2 text-neutral-800 rounded-lg border border-[#F0F0F0]">Transform</div>
+                  <div className="text-xs leading-[18px] px-4 py-2 text-neutral-800 rounded-lg border border-[#F0F0F0]">Transform</div>
+                  <div className="text-xs leading-[18px] px-4 py-2 text-neutral-800 rounded-lg border border-[#F0F0F0]">Transform</div>
+                  <div className="text-xs leading-[18px] px-4 py-2 text-neutral-800 rounded-lg border border-[#F0F0F0]">Transform</div>
                 </div>
               </div>
             </div>

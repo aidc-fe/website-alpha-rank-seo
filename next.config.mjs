@@ -9,7 +9,7 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'img.alicdn.com',
         port: '',
-        pathname: '/imgextra/i2/**',
+        pathname: '/imgextra/**',
       },
     ],
   }

@@ -4,10 +4,11 @@ export default function CommonDisplayCard(props: {
   className?: string;
   title: string;
   desc?: string;
+  descClass?: string;
   children?: JSX.Element;
   lightBg?: boolean;
 }) {
-  const { className, title, desc, children, lightBg } = props;
+  const { className, title, desc, descClass, children, lightBg } = props;
 
   return (
     <div className={cn("p-5 rounded-2xl flex flex-col", className)}>
@@ -17,7 +18,8 @@ export default function CommonDisplayCard(props: {
       <div
         className={cn(
           "text-sm mb-5 line-clamp-2",
-          lightBg ? "text-gray-500" : "opacity-50"
+          lightBg ? "text-gray-500" : "opacity-50",
+          descClass
         )}
       >
         {desc}
