@@ -5,24 +5,40 @@ export default function CommonDisplayCard(props: {
   title: string;
   desc?: string;
   children?: JSX.Element;
-  lightBg?: boolean;
+  type?: "light" | "dark" | "border";
 }) {
-  const { className, title, desc, children, lightBg } = props;
+  const { className, title, desc, children, type = "border" } = props;
 
   return (
-    <div className={cn("p-5 rounded-2xl flex flex-col", className)}>
-      <div className="text-xl font-bold text-primary mb-1 capitalize">
-        {title}
-      </div>
+    <div
+      className={cn(
+        "rounded-2xl",
+        {
+          "border bg-white/5": type === "border",
+          "bg-purple-100": type === "light",
+          "bg-gradient-to-b from-primary/30 to-[#A188F5]": type === "dark",
+        },
+        className
+      )}
+    >
       <div
-        className={cn(
-          "text-sm mb-5 line-clamp-2",
-          lightBg ? "text-gray-500" : "opacity-50"
-        )}
+        className={cn("p-5 flex rounded-2xl flex-col h-full", {
+          "bg-display-card-light-gradient": type === "light",
+        })}
       >
-        {desc}
+        <div className="text-xl font-bold text-[#805fff] mb-1 capitalize">
+          {title}
+        </div>
+        <div
+          className={cn(
+            "text-sm mb-5 line-clamp-2",
+            type === "light" ? "text-gray-500" : "opacity-50"
+          )}
+        >
+          {desc}
+        </div>
+        {children}
       </div>
-      {children}
     </div>
   );
 }

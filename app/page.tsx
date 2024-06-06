@@ -9,14 +9,14 @@ const FadeTitle =
 
 export default function Home() {
   return (
-    <div className={"flex flex-col items-center pb-72"}>
+    <div className={"flex flex-col items-center pb-72 relative"}>
       <div></div>
       <h1 className={cn("text-6xl/normal font-black text-center", FadeTitle)}>
         AlphaRank: Elevating Content, Driving Traffic
       </h1>
       <h1
         className={
-          "mt-1 text-6xl font-black	text-center text-transparent bg-clip-text bg-main-gradient"
+          "text-6xl font-black	text-center text-transparent bg-clip-text bg-main-gradient"
         }
       >
         Your Ultimate SEO Companion
@@ -48,7 +48,7 @@ export default function Home() {
 
       <ul className={"flex gap-14 mt-11 item-center"}>{TRUSTED_ARR}</ul>
 
-      <ul>
+      <ul className={"max-w-[1200px]"}>
         {KEY_BLOCK.map((item) => {
           const { icon, title, desc, Comp } = item;
           return (
@@ -57,7 +57,7 @@ export default function Home() {
               <h2 className={cn("text-5xl/normal font-bold", FadeTitle)}>
                 {title}
               </h2>
-              <div className="text-xl mb-12">{desc}</div>
+              <div className="text-xl mb-12 opacity-50">{desc}</div>
               {Comp ? <Comp /> : <></>}
             </li>
           );

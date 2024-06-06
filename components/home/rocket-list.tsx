@@ -358,11 +358,11 @@ const ROCKET_LIST = [
 
 export function RocketList() {
   return (
-    <ul className="mt-16 flex w-full gap-32 px-6">
+    <ul className="mt-16 grid grid-cols-3 gap-24 px-8">
       {ROCKET_LIST.map((item) => {
         const { title, desc, icon } = item;
         return (
-          <li key={title} className={"basic-1/3 flex flex-col items-center"}>
+          <li key={title} className={" flex flex-col items-center"}>
             {icon}
             <div className="font-semibold text-xl mt-6">{title}</div>
             <div className={"opacity-50 mt-4"}>{desc}</div>
