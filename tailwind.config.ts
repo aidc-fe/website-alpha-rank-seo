@@ -54,6 +54,7 @@ const config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        'title-color': "rgba(20,20,20,1)"
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -95,6 +96,8 @@ const config = {
       boxShadow: {
         "main-gradient":
           "0 0 54px 0 rgba(113,101,255,0.40), inset 0 -5px 20px 0 rgba(255,255,255,0.80)",
+        "table-gradient": 
+          "-28px 28px 42px 0 rgba(0,0,0,0.08)"
       },
     },
   },
