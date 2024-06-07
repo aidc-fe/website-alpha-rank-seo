@@ -1,3 +1,8 @@
+import { ALPHA_RANK_LISTING_URL, BLOG_PRODUCT_URL } from "@/constants/home";
+import { ArrowUpRight, Goal } from "lucide-react";
+import Link from "next/link";
+import { Button } from "../shadcn/button";
+
 const ROCKET_LIST = [
   {
     icon: (
@@ -122,8 +127,12 @@ const ROCKET_LIST = [
         </g>
       </svg>
     ),
-    title: "Multi-platform integrated one-click release",
-    desc: "Identify and fix your website's SEO issues with our Site Audit. Pinpoint technical and on-page factors holding back your rankings in a straightforward analysis.",
+    title: "Intelligent SEO Issues Audit & Auto-fix",
+    desc: [
+      "100-Score Guarantee: Ensuring your website achieves a full score of 100 in Google SEO.",
+      "100% Automated Diagnostics: Conduct an in-depth check of your website, covering over 90% of common SEO issues.",
+      "Above 30% Industry Levels: Average SEO scores exceeding industry standards by 30%, staying ahead of the curve.",
+    ],
   },
   {
     icon: (
@@ -231,8 +240,11 @@ const ROCKET_LIST = [
         </g>
       </svg>
     ),
-    title: "Fully managed automatic diagnostics & Optimization",
-    desc: "Unlock the power of over 100 million keywords from our extensive search intent database. Enjoy competitive insights to enhance your content's relevance and engagement. ",
+    title: "SEO-Friendly Content Generation & Optimization",
+    desc: [
+      "10 Million+ User Intent Data: Precisely identify the intentions of a massive user base.",
+      "100% Original Content: Boosting the indexing rate by more than 70%, leading by 50%+ over the industry average.",
+    ],
   },
   {
     icon: (
@@ -351,24 +363,62 @@ const ROCKET_LIST = [
         </g>
       </svg>
     ),
-    title: "Content includes pictures & intelligent in-link layout",
-    desc: "Unlock the power of over 100 million keywords from our extensive search intent database. Enjoy competitive insights to enhance your content's relevance and engagement. ",
+    title: "Real-Time Keywords Ranking Monitor & Boost",
+    desc: [
+      "24/7 Keyword Monitoring: The system tracks core keyword rankings around the clock, updated hourly.",
+      "Top-10 Assurance: 80% of core keywords firmly rank on Google's first page, enhancing brand visibility.",
+      "Competitive Analysis: In-depth analysis of competitors' ranking strategies, staying far ahead.",
+    ],
   },
 ];
 
 export function RocketList() {
   return (
-    <ul className="mt-16 grid grid-cols-3 gap-24 px-8">
-      {ROCKET_LIST.map((item) => {
-        const { title, desc, icon } = item;
-        return (
-          <li key={title} className={" flex flex-col items-center"}>
-            {icon}
-            <div className="font-semibold text-xl mt-6">{title}</div>
-            <div className={"opacity-50 mt-4"}>{desc}</div>
-          </li>
-        );
-      })}
-    </ul>
+    <div className="flex flex-col items-center">
+      <ul className="mt-16 grid grid-cols-3 gap-20 px-8">
+        {ROCKET_LIST.map((item) => {
+          const { title, desc, icon } = item;
+          return (
+            <li key={title} className={"flex flex-col items-center"}>
+              {icon}
+              <Button
+                variant={"link"}
+                className={"text-white whitespace-normal h-fit"}
+              >
+                <Link
+                  href={BLOG_PRODUCT_URL}
+                  target="_blank"
+                  className="font-semibold text-xl mt-6 capitalize group"
+                >
+                  <span>{title}</span>
+                  <ArrowUpRight className="shrink-0 inline group-hover:text-purple-400" />
+                </Link>
+              </Button>
+
+              <ul className={"mt-4 flex flex-col gap-2"}>
+                {desc.map((item) => (
+                  <li key={item} className="flex gap-2">
+                    <Goal size={20} className="text-purple-400 shrink-0" />
+                    <span className="opacity-50">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </li>
+          );
+        })}
+      </ul>
+      <Button
+        variant={"colorful"}
+        className={"rounded-2xl h-20 px-12 text-3xl mt-12 font-bold"}
+      >
+        <Link
+          className="w-full h-full flex justify-center items-center"
+          target="_blank"
+          href={ALPHA_RANK_LISTING_URL}
+        >
+          Get Free Trial
+        </Link>
+      </Button>
+    </div>
   );
 }

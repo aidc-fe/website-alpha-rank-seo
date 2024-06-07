@@ -27,31 +27,31 @@ const InsightItems = [
     className: "translate-x-[-158px] translate-y-[-30px]",
   },
   {
-    text: "Titles",
-    className: "translate-x-[-224px]",
+    text: "Titles & Descriptions",
+    className: "translate-x-[-124px]",
   },
   {
-    text: "Descriptions",
+    text: "Technical Issues",
     className: "translate-x-[-90px] translate-y-[62px]",
   },
 ];
 
-const columns = ["Keywords", "KD", "Address"];
+const columns = ["Keywords", "KD"];
 const data = [
-  { keywords: "John Brown", kd: 32, address: "New York" },
-  { keywords: "Jim Green", kd: 42, address: "London" },
-  { keywords: "Joe Black", kd: 32, address: "Sidney" },
-  { keywords: "Joe Black", kd: 32, address: "Sidney" },
-  { keywords: "Joe Black", kd: 32, address: "Sidney" },
+  { keywords: "pet friendly furniture", kd: 18 },
+  { keywords: "furniture covers for pets", kd: 23 },
+  { keywords: "pet furniture covers", kd: 32 },
+  { keywords: "pet furniture", kd: 32 },
+  { keywords: "pet furniture protector", kd: 22 },
 ];
 
-const columns1 = ["No.", "Topic", "Address"];
+const columns1 = ["Topic"];
 const data1 = [
-  { no: 1, topic: "Trending Topics Trending Topics", address: "New York" },
-  { no: 2, topic: "Trending Topics Trending Topics", address: "London" },
-  { no: 3, topic: "Trending Topics Trending Topics", address: "Sidney" },
-  { no: 4, topic: "Trending Topics Trending Topics", address: "Sidney" },
-  { no: 5, topic: "Trending Topics Trending Topics", address: "Sidney" },
+  { topic: "Pet-friendly couches and sofas" },
+  { topic: "Best Furniture For Pets Top Sellers" },
+  { topic: "Pet-friendly sofa covers" },
+  { topic: "15 Best Pet-Friendly Couches To Buy In 2024" },
+  { topic: "Pet-Friendly Living Room Collections" },
 ];
 
 export default function MarketInsight() {
@@ -72,7 +72,7 @@ export default function MarketInsight() {
               return (
                 <div
                   key={index}
-                  className={`px-3 py-0.5 leading-7 text-sm transition duration-500 ease-in-out  bg-[rgba(111,80,232,0.1)] font-bold text-[#805fff] rounded-full whitespace-nowrap absolute right-1/2 bottom-1/2 translate-x-1/2 translate-y-1/2  ${item.className}`}
+                  className={`px-3 py-0.5 leading-7 text-sm transition duration-500 ease-in-out  bg-primary/10 font-bold text-[#805fff] rounded-full whitespace-nowrap absolute right-1/2 bottom-1/2 translate-x-1/2 translate-y-1/2  ${item.className}`}
                 >
                   {item.text}
                 </div>
@@ -98,7 +98,7 @@ export default function MarketInsight() {
               return (
                 <div
                   key={index}
-                  className={`px-3 py-0.5 leading-7 text-sm transition duration-500 ease-in-out  bg-[rgba(111,80,232,0.1)] font-bold text-primary rounded-full whitespace-nowrap absolute right-1/2 bottom-1/2 translate-x-1/2 translate-y-1/2 opacity-0 opacity-100 ${item.className}`}
+                  className={`px-3 py-0.5 leading-7 text-sm transition duration-500 ease-in-out  bg-primary/10 font-bold text-primary rounded-full whitespace-nowrap absolute right-1/2 bottom-1/2 translate-x-1/2 translate-y-1/2 opacity-0 opacity-100 ${item.className}`}
                 >
                   {item.text}
                 </div>
@@ -119,15 +119,15 @@ export default function MarketInsight() {
         <div className="flex">
           <div className="relative shrink-0 top-[30px] p-4 bg-white rounded-xl w-[334px] h-[326px] shadow-table-gradient">
             <div className="text-sm font-bold text-title-color mb-3.5">
-              Keywords Suggestion
+              Keywords Strategies
             </div>
-            <table className="min-w-full divide-y divide-gray-200 border-collapse">
-              <thead className="bg-gray-100">
+            <table className="divide-y divide-gray-200 border-collapse">
+              <thead className="bg-gray-100 rounded-t-lg">
                 <tr>
                   {columns.map((col) => (
                     <th
                       key={col}
-                      className="px-3 py-1.5 leading-[18px] text-left text-xs font-medium text-gray-500 tracking-wider"
+                      className="rounded-t-lg px-3 py-1.5 text-xs font-medium text-gray-500"
                     >
                       {col}
                     </th>
@@ -137,33 +137,30 @@ export default function MarketInsight() {
               <tbody className="bg-white divide-y divide-gray-200">
                 {data.map((row, index) => (
                   <tr key={index}>
-                    <td className="p-3 whitespace-nowrap text-sm text-gray-900">
+                    <td className="p-3 whitespace-nowrap text-sm text-gray-700">
                       {row.keywords}
                     </td>
-                    <td className="p-3 whitespace-nowrap text-sm text-gray-900">
-                      <div className="inline-block px-1.5 py-0.5 bg-[#FFF3BF] rounded text-[#F59F00] text-xs">
+                    <td className="p-3 whitespace-nowrap text-sm text-gray-700">
+                      <div className="inline-block px-1.5 py-0.5 bg-yellow-100 rounded text-yellow-500 font-medium text-xs">
                         {row.kd}
                       </div>
-                    </td>
-                    <td className="p-3 whitespace-nowrap text-sm text-gray-900">
-                      {row.address}
                     </td>
                   </tr>
                 ))}
               </tbody>
             </table>
           </div>
-          <div className="relative shrink-0 top-[12px] left-[-140px] p-4 bg-white rounded-xl w-[334px] h-[326px] shadow-table-gradient">
+          <div className="relative shrink-0 top-[12px] left-[-84px] p-4 bg-white rounded-xl w-[334px] h-[326px] shadow-table-gradient">
             <div className="text-sm font-bold text-title-color mb-3.5">
-              Trending Topics
+              Topics Research
             </div>
             <table className="min-w-full divide-y divide-gray-200 border-collapse">
-              <thead className="bg-gray-100">
+              <thead className="bg-gray-100 rounded-t-lg">
                 <tr>
                   {columns1.map((col) => (
                     <th
                       key={col}
-                      className="px-3 py-1.5 leading-[18px] text-left text-xs font-medium text-gray-500 tracking-wider"
+                      className="rounded-t-lg px-3 py-1.5 text-xs font-medium text-gray-500"
                     >
                       {col}
                     </th>
@@ -173,85 +170,63 @@ export default function MarketInsight() {
               <tbody className="bg-white divide-y divide-gray-200">
                 {data1.map((row, index) => (
                   <tr key={index}>
-                    <td className="p-3 whitespace-nowrap text-sm text-gray-900">
-                      {row.no}
-                    </td>
-                    <td className="p-3 whitespace-nowrap text-sm text-gray-900">
-                      <div className="max-w-[150px] truncate ...">
-                        {row.topic}
-                      </div>
-                    </td>
-                    <td className="p-3 whitespace-nowrap text-sm text-gray-900">
-                      {row.address}
+                    <td className="p-3 whitespace-nowrap text-sm text-gray-700">
+                      <div>{row.topic}</div>
                     </td>
                   </tr>
                 ))}
               </tbody>
             </table>
           </div>
-          <div className="relative shrink-0 top-[30px] left-[-250px] p-4 bg-white rounded-xl w-[412px] h-[326px] shadow-table-gradient">
-            <div className="text-sm font-bold text-title-color mb-3.5">
-              Keywords comparison
+          <div className="flex flex-col relative shrink-0 top-[30px] left-[-150px] p-4 bg-white rounded-xl w-[412px] h-[326px] shadow-table-gradient">
+            <div className="capitalize text-sm font-bold text-title-color mb-3.5">
+              Competitor Insights
             </div>
-            <div className="flex justify-between">
-              <div className="w-[182px] h-[262px] rounded-lg border border-[#F0F0F0]">
-                <div className="flex py-3.5 px-4">
-                  <Image
-                    src="https://img.alicdn.com/imgextra/i3/O1CN01MP51ep1r5Ec6FZP1z_!!6000000005579-55-tps-18-18.svg"
-                    width={18}
-                    height={18}
-                    alt=""
-                  />
-                  <div className="text-sm font-bold text-title-color ml-1">
-                    Website A
-                  </div>
-                </div>
-                <div className="px-4 text-xs font-medium text-gray-500 bg-gray-100 leading-7">
+            <div className="flex gap-2 flex-grow">
+              <div className="rounded-lg border border-gray-200 flex flex-col">
+                <div className="px-4 rounded-t-lg text-xs font-medium text-gray-500 bg-gray-100 py-1.5">
                   keywords
                 </div>
-                <div className="flex flex-col p-3.5 gap-1.5">
-                  <div className="text-xs leading-5 px-4 py-2 text-neutral-800 rounded-lg bg-[rgba(111,80,232,0.12)]">
-                    Transform
-                  </div>
-                  <div className="text-xs leading-5 px-4 py-2 text-neutral-800 rounded-lg bg-[rgba(111,80,232,0.12)]">
-                    Transform
-                  </div>
-                  <div className="text-xs leading-5 px-4 py-2 text-neutral-800 rounded-lg bg-[rgba(111,80,232,0.12)]">
-                    Transform
-                  </div>
-                  <div className="text-xs leading-5 px-4 py-2 text-neutral-800 rounded-lg bg-[rgba(111,80,232,0.12)]">
-                    Transform
-                  </div>
+                <div className="flex flex-col px-1 py-2 justify-between flex-grow">
+                  {[
+                    "pet proof furniture",
+                    "pet furniture cover",
+                    "furniture and pets",
+                    "pet kennel furniture",
+                    "pets furniture",
+                  ].map((item) => {
+                    return (
+                      <div
+                        key={item}
+                        className="whitespace-nowrap leading-5 px-4 py-2 text-gray-700 text-sm rounded-lg bg-primary/10"
+                      >
+                        {item}
+                      </div>
+                    );
+                  })}
                 </div>
               </div>
-              <div className="w-[182px] h-[262px] rounded-lg border border-[#F0F0F0]">
-                <div className="flex py-3.5 px-4">
-                  <Image
-                    src="https://img.alicdn.com/imgextra/i1/O1CN01AkOcHw1qmSNJrpiFb_!!6000000005538-55-tps-18-18.svg"
-                    width={18}
-                    height={18}
-                    alt=""
-                  />
-                  <div className="text-sm font-bold text-title-color ml-1">
-                    Website A
-                  </div>
-                </div>
-                <div className="px-4 text-xs font-medium text-gray-500 bg-gray-100 leading-7">
+              <div className="w-fit rounded-lg border border-gray-200 flex flex-col">
+                <div className="px-4 rounded-t-lg text-xs font-medium text-gray-500 bg-gray-100 py-1.5">
                   keywords
                 </div>
-                <div className="flex flex-col p-3.5 gap-1.5">
-                  <div className="text-xs leading-[18px] px-4 py-2 text-neutral-800 rounded-lg border border-[#F0F0F0]">
-                    Transform
-                  </div>
-                  <div className="text-xs leading-[18px] px-4 py-2 text-neutral-800 rounded-lg border border-[#F0F0F0]">
-                    Transform
-                  </div>
-                  <div className="text-xs leading-[18px] px-4 py-2 text-neutral-800 rounded-lg border border-[#F0F0F0]">
-                    Transform
-                  </div>
-                  <div className="text-xs leading-[18px] px-4 py-2 text-neutral-800 rounded-lg border border-[#F0F0F0]">
-                    Transform
-                  </div>
+                <div className="flex flex-col px-1 py-2 justify-between flex-grow">
+                  {[
+                    "how to keep pets off furniture",
+                    "waterproof pet covers for furniture",
+                    "best furniture pet hair remover",
+                    "waterproof pet furniture covers for sectionals",
+                    "ikea pet furniture",
+                  ].map((item) => {
+                    return (
+                      <div
+                        key={item}
+                        className="whitespace-nowrap leading-5 px-4 py-2 text-gray-700 text-sm rounded-lg border border-gray-100"
+                      >
+                        {item}
+                      </div>
+                    );
+                  })}
                 </div>
               </div>
             </div>

@@ -63,6 +63,7 @@ export const KEY_BLOCK = [
     title: "Why Choose AlphaRank",
     Comp: WhyChooseList,
   },
+  { title: "Work with Us As A SEO Expert", Comp: RocketList },
   {
     icon: (
       <svg width="66px" height="66px" viewBox="0 0 66 66" version="1.1">
@@ -230,7 +231,6 @@ export const KEY_BLOCK = [
     desc: "AlphaRank’s ToolSets",
     Comp: ToolsCardList,
   },
-  { title: "Let’s rocket your Webflow SEO!", Comp: RocketList },
 ];
 
 export const TRUSTED_ARR = [

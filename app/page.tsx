@@ -2,6 +2,7 @@ import { Button } from "@/components/shadcn/button";
 import { Input } from "@/components/shadcn/input";
 import {
   ALPHA_RANK_LISTING_URL,
+  BLOG_PRODUCT_URL,
   KEY_BLOCK,
   TRUSTED_ARR,
 } from "@/constants/home";
@@ -14,7 +15,7 @@ const FadeTitle =
 
 export default function Home() {
   return (
-    <div className={"flex flex-col items-center pb-72 relative"}>
+    <div className={"flex flex-col items-center pb-52 relative"}>
       <Image
         className="my-6"
         width={320}
@@ -23,7 +24,7 @@ export default function Home() {
         src="https://img.alicdn.com/imgextra/i4/O1CN01M040pe1PMoZhVeyRL_!!6000000001827-49-tps-642-92.webp"
       />
       <h1 className={cn("text-6xl/normal font-black text-center", FadeTitle)}>
-        AlphaRank: Elevating Content, Driving Traffic
+        Beyond Content, Where Traffic Thrives
       </h1>
       <h1
         className={
@@ -33,7 +34,7 @@ export default function Home() {
         Your Ultimate SEO Companion
       </h1>
       <div className={"opacity-40 text-xl mt-3"}>
-        Beyond Content: AlphaRank, Where Traffic Thrives.
+        AlphaRank: Elevating Content, Driving Traffic
       </div>
       <div className={"flex flex-nowrap gap-2 mt-20"}>
         <Input
@@ -44,12 +45,22 @@ export default function Home() {
           <Link
             className="w-full h-full flex justify-center items-center"
             target="_blank"
-            href={ALPHA_RANK_LISTING_URL}
+            href={BLOG_PRODUCT_URL}
           >
             Get Free Trial
           </Link>
         </Button>
       </div>
+
+      <Image
+        className="mt-7"
+        width={232}
+        height={32}
+        alt="shopify wordpress"
+        src={
+          "https://img.alicdn.com/imgextra/i1/O1CN01ianGgU1irTnEY0iU8_!!6000000004466-49-tps-464-64.webp"
+        }
+      />
       <iframe
         className="mt-14"
         width="560"
@@ -59,8 +70,8 @@ export default function Home() {
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
       ></iframe>
       <h3 className={cn("text-3xl/10 mt-24 text-center font-bold", FadeTitle)}>
-        Trusted by 15,000+ Content
-        <br /> Creators,SEOs,Agencies,and Teams
+        Trusted by Top-Tier Partners
+        <br /> Creators, Bloggers, Agencies, and Businesses
       </h3>
 
       <ul className={"flex gap-14 mt-11 item-center"}>{TRUSTED_ARR}</ul>

@@ -1,17 +1,13 @@
 "use client";
 
-import { cn } from "@/lib/utils";
+import { cn } from "../../../lib/utils";
 import React, { useEffect, useState } from "react";
-import {
-  Avatar,
-  AvatarFallback,
-  AvatarImage,
-} from "@/components/shadcn/avatar";
+import { Avatar, AvatarFallback, AvatarImage } from "../../shadcn/avatar";
 
 export const InfiniteMovingCards = ({
   items,
   direction = "up",
-  speed = "fast",
+  speed = "slow",
   pauseOnHover = true,
   className,
 }: {
@@ -90,7 +86,7 @@ export const InfiniteMovingCards = ({
         )}
       >
         {items.map((item, idx) => {
-          const { name, quote, title } = item;
+          const { name, quote, title, avatar } = item;
 
           return (
             <li
@@ -102,8 +98,8 @@ export const InfiniteMovingCards = ({
               >
                 <div className={"row-span-2 mr-2"}>
                   <Avatar className={"w-16 h-16"}>
-                    <AvatarImage src="https://github.com/shadcn.png" />
-                    <AvatarFallback>CN</AvatarFallback>
+                    <AvatarImage src={avatar} />
+                    <AvatarFallback>SEO</AvatarFallback>
                   </Avatar>
                 </div>
 
