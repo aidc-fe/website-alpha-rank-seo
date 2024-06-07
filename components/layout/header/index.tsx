@@ -15,7 +15,11 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/shadcn/navigation-menu";
 import { Button } from "@/components/shadcn/button";
-import { Logo_Icon } from "@/constants/home";
+import {
+  ALPHA_RANK_LISTING_URL,
+  BLOG_PRODUCT_URL,
+  Logo_Icon,
+} from "@/constants/home";
 
 const components: { title: string; href: string; description: string }[] = [
   {
@@ -180,10 +184,22 @@ export default function NavigationMenuDemo() {
             size={"lg"}
             variant={"outline"}
           >
-            Log in
+            <Link
+              className="w-full h-full flex justify-center items-center"
+              target="_blank"
+              href={BLOG_PRODUCT_URL}
+            >
+              Log in
+            </Link>
           </Button>
           <Button size={"lg"} variant={"colorful"}>
-            Get Started
+            <Link
+              className="w-full"
+              target="_blank"
+              href={ALPHA_RANK_LISTING_URL}
+            >
+              Get Started
+            </Link>
           </Button>
           {/* <ThemeToggle /> */}
         </div>

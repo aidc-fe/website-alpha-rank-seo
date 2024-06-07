@@ -22,6 +22,9 @@ const config = {
     },
     extend: {
       colors: {
+        "white-15": "rgba(255,255,255,0.15)",
+        second: "#595959",
+        third: "#191919",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -56,6 +59,7 @@ const config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        "title-color": "rgba(20,20,20,1)",
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -93,25 +97,40 @@ const config = {
           "linear-gradient(to var(--direction), hsl(var(--background)) 0%, rgba(16, 13, 38, 0) 100%)",
         "display-card-light-gradient":
           "radial-gradient(circle at 1.3e+02% 1.5e+02%, rgba(64,213,255,0.00) 0%, rgba(255,255,255,0.50) 169%), radial-gradient(circle at 19% -5.4%, rgba(147,120,255,0.54) 0%, rgba(147,120,255,0.54) 24%, rgba(255,255,255,0.00) 79%);",
+        "display-card-primary-gradient":
+          "linear-gradient(180deg, rgba(81,80,232,0.30) 0%, #A188F5 100%)",
+        "card-main":
+          "radial-gradient(circle at 1.3e+02% 1.5e+02%, rgba(64,213,255,0.00) 0%, rgba(255,255,255,0.50) 169%), radial-gradient(circle at 19% -5.4%, rgba(147,120,255,0.54) 0%, rgba(147,120,255,0.54) 24%, rgba(255,255,255,0.00) 79%)",
+        "box-gradient": "linear-gradient(180deg, #E3DEFB 0%, #ECE7FE 100%)",
+        "metadata-gradient":
+          "linear-gradient(146deg, #FFFFFF 43%, #E1C3FA 100%)",
       },
       boxShadow: {
         "main-gradient":
           "0 0 54px 0 rgba(113,101,255,0.40), inset 0 -5px 20px 0 rgba(255,255,255,0.80)",
+        "table-gradient": "-28px 28px 42px 0 rgba(0,0,0,0.08)",
+        "box-gradient": "0 0 4px 0 rgba(111,80,232,0.24)",
+      },
+      backgroundColor: {
+        "white-50": "rgba(255, 255, 255, 0.5)",
+      },
+      backdropBlur: {
+        "custom-blur": "10px",
       },
     },
   },
   plugins: [
     require("tailwindcss-animate"),
-    plugin(function ({ addUtilities }: { addUtilities: Function }) {
+    function ({ addUtilities }: { addUtilities: Function }) {
       addUtilities({
-        ".mask-image": {
-          "-webkit-mask-image":
-            'url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2724%27 height=%2724%27 viewBox=%270 0 24 24%27 fill=%27none%27 stroke=%27currentColor%27 strokeWidth=%272%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27 class=%27lucide lucide-diamond-plus%27%3E%3Cpath d=%27M12 8v8%27/%3E%3Cpath d=%27M2.7 10.3a2.41 2.41 0 0 0 0 3.41l7.59 7.59a2.41 2.41 0 0 0 3.41 0l7.59-7.59a2.41 2.41 0 0 0 0-3.41L13.7 2.71a2.41 2.41 0 0 0-3.41 0z%27/%3E%3Cpath d=%27M8 12h8%27/%3E%3C/svg%3E")',
-          "mask-image":
-            'url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2724%27 height=%2724%27 viewBox=%270 0 24 24%27 fill=%27none%27 stroke=%27currentColor%27 strokeWidth=%272%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27 class=%27lucide lucide-diamond-plus%27%3E%3Cpath d=%27M12 8v8%27/%3E%3Cpath d=%27M2.7 10.3a2.41 2.41 0 0 0 0 3.41l7.59 7.59a2.41 2.41 0 0 0 3.41 0l7.59-7.59a2.41 2.41 0 0 0 0-3.41L13.7 2.71a2.41 2.41 0 0 0-3.41 0z%27/%3E%3Cpath d=%27M8 12h8%27/%3E%3C/svg%3E")',
+        ".line-clamp-2": {
+          display: "-webkit-box",
+          "-webkit-box-orient": "vertical",
+          "-webkit-line-clamp": "2",
+          overflow: "hidden",
         },
       });
-    }),
+    },
   ],
 } satisfies Config;
 

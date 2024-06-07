@@ -10,10 +10,10 @@ export default function CommonDisplayCard(props: {
 }) {
   const {
     className,
-    innerClassName,
     title,
     desc,
     children,
+    innerClassName,
     type = "border",
   } = props;
 
@@ -29,11 +29,7 @@ export default function CommonDisplayCard(props: {
         className
       )}
     >
-      <div
-        className={cn("flex rounded-2xl flex-col h-full p-5", innerClassName, {
-          "bg-display-card-light-gradient": type === "light",
-        })}
-      >
+      <div className={cn("p-5 h-full w-full", innerClassName)}>
         {title && (
           <div className="text-xl font-bold text-[#805fff] mb-1 capitalize">
             {title}

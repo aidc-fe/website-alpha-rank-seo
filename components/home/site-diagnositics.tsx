@@ -9,9 +9,18 @@ export default function SiteDiagnostics() {
     <div className="grid grid-flow-row grid-cols-2 gap-5">
       <CommonDisplayCard
         type="dark"
-        title={"网站检索"}
-        desc="Competitive characteristics, competitive keywords"
-      ></CommonDisplayCard>
+        title={"Website Analytics"}
+        desc="Branding Analysis, Competitive Insights, Industry Research, ..."
+        innerClassName="relative"
+      >
+        <Image
+          width={358}
+          height={244}
+          className="absolute b-0 left-1/2 -translate-x-1/2"
+          alt={"Website Analytics Tree"}
+          src="https://img.alicdn.com/imgextra/i4/O1CN01LBimlN1sgAACvrURQ_!!6000000005795-49-tps-728-492.webp"
+        />
+      </CommonDisplayCard>
 
       <CommonDisplayCard
         innerClassName="flex flex-col gap-2 pb-0"

@@ -1,7 +1,16 @@
 import CommonDisplayCard from "./common-display-card";
-import Star1 from "./assets/star1.webp";
+import Image from "next/image";
 
 export default function TrafficAcceleratorBlock() {
+  return (
+    <Image
+      width={1200}
+      height={420}
+      alt="traffic accelerator"
+      src="https://img.alicdn.com/imgextra/i4/O1CN01iuy6Cx25Qfm22rscx_!!6000000007521-49-tps-2412-1070.webp"
+    />
+  );
+
   return (
     <div className={"grid grid-rows-2 grid-cols-3 gap-5"}>
       <CommonDisplayCard

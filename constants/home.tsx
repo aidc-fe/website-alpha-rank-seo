@@ -9,6 +9,8 @@ import TrafficAcceleratorBlock from "@/components/home/traffic-accelerator-block
 import { WhyChooseList } from "@/components/home/why-choose-list";
 import Image from "next/image";
 
+export const BLOG_PRODUCT_URL = "https://blog.alpha-rank.com/";
+export const ALPHA_RANK_LISTING_URL = "https://apps.shopify.com/alpharank-1";
 export const Logo_Icon = (
   <svg width="148px" height="32px" viewBox="0 0 148 32" version="1.1">
     <defs>

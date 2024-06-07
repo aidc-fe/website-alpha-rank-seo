@@ -1,7 +1,13 @@
 import { Button } from "@/components/shadcn/button";
 import { Input } from "@/components/shadcn/input";
-import { KEY_BLOCK, TRUSTED_ARR } from "@/constants/home";
+import {
+  ALPHA_RANK_LISTING_URL,
+  KEY_BLOCK,
+  TRUSTED_ARR,
+} from "@/constants/home";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
+import Link from "next/link";
 
 const FadeTitle =
   "text-center text-transparent bg-clip-text bg-gradient-to-b from-white/100 to-white/50";
@@ -9,7 +15,13 @@ const FadeTitle =
 export default function Home() {
   return (
     <div className={"flex flex-col items-center pb-72 relative"}>
-      <div></div>
+      <Image
+        className="my-6"
+        width={320}
+        height={46}
+        alt="product hunt label"
+        src="https://img.alicdn.com/imgextra/i4/O1CN01M040pe1PMoZhVeyRL_!!6000000001827-49-tps-642-92.webp"
+      />
       <h1 className={cn("text-6xl/normal font-black text-center", FadeTitle)}>
         AlphaRank: Elevating Content, Driving Traffic
       </h1>
@@ -29,7 +41,13 @@ export default function Home() {
           className={"bg-white/10 w-96 h-10 rounded-[8px]"}
         />
         <Button size={"lg"} variant={"colorful"}>
-          Get Free Trial
+          <Link
+            className="w-full h-full flex justify-center items-center"
+            target="_blank"
+            href={ALPHA_RANK_LISTING_URL}
+          >
+            Get Free Trial
+          </Link>
         </Button>
       </div>
       <iframe
@@ -67,7 +85,13 @@ export default function Home() {
         variant={"colorful"}
         className={"rounded-2xl h-20 px-12 text-3xl font-bold mt-52"}
       >
-        Get Free Trial
+        <Link
+          className="w-full h-full flex justify-center items-center"
+          target="_blank"
+          href={ALPHA_RANK_LISTING_URL}
+        >
+          Get Free Trial
+        </Link>
       </Button>
     </div>
   );
