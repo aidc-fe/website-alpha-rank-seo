@@ -1,32 +1,3 @@
-// import {
-//   NavigationMenu,
-//   NavigationMenuContent,
-//   NavigationMenuIndicator,
-//   NavigationMenuItem,
-//   NavigationMenuLink,
-//   NavigationMenuList,
-//   NavigationMenuTrigger,
-//   NavigationMenuViewport,
-// } from "@/components/shadcn/navigation-menu";
-
-// export default function Header() {
-//   return (
-//     <header>
-//       <ThemeToggle />
-//       <NavigationMenu>
-//         <NavigationMenuList>
-//           <NavigationMenuItem>
-//             <NavigationMenuTrigger>Item One</NavigationMenuTrigger>
-//             <NavigationMenuContent>
-//               <NavigationMenuLink>Link</NavigationMenuLink>
-//             </NavigationMenuContent>
-//           </NavigationMenuItem>
-//         </NavigationMenuList>
-//       </NavigationMenu>
-//     </header>
-//   );
-// }
-
 "use client";
 
 import * as React from "react";
@@ -43,6 +14,12 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/shadcn/navigation-menu";
+import { Button } from "@/components/shadcn/button";
+import {
+  ALPHA_RANK_LISTING_URL,
+  BLOG_PRODUCT_URL,
+  Logo_Icon,
+} from "@/constants/home";
 
 const components: { title: string; href: string; description: string }[] = [
   {
@@ -84,92 +61,149 @@ const components: { title: string; href: string; description: string }[] = [
 
 export default function NavigationMenuDemo() {
   return (
-    <header
-      className={
-        "flex justify-between p-4 sticky top-0 backdrop-blur-md bg-transparent z-10"
-      }
-    >
-      <NavigationMenu>
-        <NavigationMenuList>
-          <NavigationMenuItem>
-            <NavigationMenuTrigger>Tools</NavigationMenuTrigger>
-            <NavigationMenuContent>
-              <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-                <li className="row-span-3">
-                  <NavigationMenuLink asChild>
-                    <a
-                      className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
-                      href="/"
-                    >
-                      <div className="mb-2 mt-4 text-lg font-medium">
-                        shadcn/ui
-                      </div>
-                      <p className="text-sm leading-tight text-muted-foreground">
-                        Beautifully designed components built with Radix UI and
-                        Tailwind CSS.
-                      </p>
-                    </a>
-                  </NavigationMenuLink>
-                </li>
-                <ListItem href="/tools/site-audit" title="Site Audit">
-                  site audit
-                </ListItem>
-                <ListItem href="/docs/installation" title="Installation">
-                  How to install dependencies and structure your app.
-                </ListItem>
-                <ListItem href="/docs/primitives/typography" title="Typography">
-                  Styles for headings, paragraphs, lists...etc
-                </ListItem>
-              </ul>
-            </NavigationMenuContent>
-          </NavigationMenuItem>
-          <NavigationMenuItem>
-            <NavigationMenuTrigger>Blogs</NavigationMenuTrigger>
-            <NavigationMenuContent>
-              <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
-                {components.map((component) => (
-                  <ListItem
-                    key={component.title}
-                    title={component.title}
-                    href={component.href}
-                  >
-                    {component.description}
+    <header className={"z-50 sticky flex flex-col items-center top-[-40px]"}>
+      <div
+        className="p-2 w-full text-center text-sm border-primary "
+        style={{
+          backgroundImage:
+            "linear-gradient(90deg, #0D0C18 0%, #31296E 38%, #462961 61%, #100E1C 100%)",
+        }}
+      >
+        🎉{" "}
+        <span className="opacity-50">
+          Exclusive June Offer: Enjoy a FREE Trial & Unlock 30% OFF Your
+          Purchase
+        </span>
+        <Button
+          size={"sm"}
+          variant={"outline"}
+          className="bg-transparent font-bold opacity-50 border-white h-6 ml-6"
+        >
+          Seize Your Deal Today !
+        </Button>
+      </div>
+
+      <div className={"flex items-center p-4 backdrop-blur-md w-full"}>
+        <Link href={"/"} className={"mr-14"}>
+          {Logo_Icon}
+        </Link>
+
+        <NavigationMenu>
+          <NavigationMenuList>
+            <NavigationMenuItem>
+              <NavigationMenuTrigger>Tools</NavigationMenuTrigger>
+              <NavigationMenuContent>
+                <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
+                  <li className="row-span-3">
+                    <NavigationMenuLink asChild>
+                      <a
+                        className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
+                        href="/"
+                      >
+                        <div className="mb-2 mt-4 text-lg font-medium">
+                          shadcn/ui
+                        </div>
+                        <p className="text-sm leading-tight text-muted-foreground">
+                          Beautifully designed components built with Radix UI
+                          and Tailwind CSS.
+                        </p>
+                      </a>
+                    </NavigationMenuLink>
+                  </li>
+                  <ListItem href="/tools/site-audit" title="Site Audit">
+                    site audit
                   </ListItem>
-                ))}
-              </ul>
-            </NavigationMenuContent>
-          </NavigationMenuItem>
-          <NavigationMenuItem>
-            <Link href="/docs" legacyBehavior passHref>
-              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                Pricing
-              </NavigationMenuLink>
+                  <ListItem href="/docs/installation" title="Installation">
+                    How to install dependencies and structure your app.
+                  </ListItem>
+                  <ListItem
+                    href="/docs/primitives/typography"
+                    title="Typography"
+                  >
+                    Styles for headings, paragraphs, lists...etc
+                  </ListItem>
+                </ul>
+              </NavigationMenuContent>
+            </NavigationMenuItem>
+            <NavigationMenuItem>
+              <NavigationMenuTrigger>Blogs</NavigationMenuTrigger>
+              <NavigationMenuContent>
+                <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+                  {components.map((component) => (
+                    <ListItem
+                      key={component.title}
+                      title={component.title}
+                      href={component.href}
+                    >
+                      {component.description}
+                    </ListItem>
+                  ))}
+                </ul>
+              </NavigationMenuContent>
+            </NavigationMenuItem>
+            <NavigationMenuItem>
+              <Link href="/docs" legacyBehavior passHref>
+                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                  Pricing
+                </NavigationMenuLink>
+              </Link>
+            </NavigationMenuItem>
+            <NavigationMenuItem>
+              <Link href="/docs" legacyBehavior passHref>
+                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                  Resources
+                </NavigationMenuLink>
+              </Link>
+            </NavigationMenuItem>
+            <NavigationMenuItem>
+              <Link href="/docs" legacyBehavior passHref>
+                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                  Partner
+                </NavigationMenuLink>
+              </Link>
+            </NavigationMenuItem>
+            <NavigationMenuItem>
+              <Link href="/docs" legacyBehavior passHref>
+                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                  Contact
+                </NavigationMenuLink>
+              </Link>
+            </NavigationMenuItem>
+          </NavigationMenuList>
+        </NavigationMenu>
+
+        <div className={"flex gap-4 items-center ml-auto"}>
+          <Button
+            className={"text-accent-foreground px-0 font-medium"}
+            variant={"link"}
+          >
+            Book a Demo
+          </Button>
+          <Button
+            className="font-medium text-sm bg-transparent border-primary"
+            size={"lg"}
+            variant={"outline"}
+          >
+            <Link
+              className="w-full h-full flex justify-center items-center"
+              target="_blank"
+              href={BLOG_PRODUCT_URL}
+            >
+              Log in
             </Link>
-          </NavigationMenuItem>
-          <NavigationMenuItem>
-            <Link href="/docs" legacyBehavior passHref>
-              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                Resources
-              </NavigationMenuLink>
+          </Button>
+          <Button size={"lg"} variant={"colorful"}>
+            <Link
+              className="w-full"
+              target="_blank"
+              href={ALPHA_RANK_LISTING_URL}
+            >
+              Get Started
             </Link>
-          </NavigationMenuItem>
-          <NavigationMenuItem>
-            <Link href="/docs" legacyBehavior passHref>
-              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                Partner
-              </NavigationMenuLink>
-            </Link>
-          </NavigationMenuItem>
-          <NavigationMenuItem>
-            <Link href="/docs" legacyBehavior passHref>
-              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                Contact
-              </NavigationMenuLink>
-            </Link>
-          </NavigationMenuItem>
-        </NavigationMenuList>
-      </NavigationMenu>
-      <ThemeToggle />
+          </Button>
+          {/* <ThemeToggle /> */}
+        </div>
+      </div>
     </header>
   );
 }
