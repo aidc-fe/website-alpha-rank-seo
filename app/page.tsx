@@ -1,6 +1,5 @@
 import { Button } from "@/components/shadcn/button";
 import { Input } from "@/components/shadcn/input";
-import HoverGlowCard from "@/components/ui/hover-glow-card";
 import { KEY_BLOCK, TRUSTED_ARR } from "@/constants/home";
 import { cn } from "@/lib/utils";
 
@@ -27,7 +26,7 @@ export default function Home() {
       <div className={"flex flex-nowrap gap-2 mt-20"}>
         <Input
           placeholder="Enter a URL or keyword"
-          className={"bg-white/10 w-80 h-10 rounded-[8px]"}
+          className={"bg-white/10 w-96 h-10 rounded-[8px]"}
         />
         <Button size={"lg"} variant={"colorful"}>
           Get Free Trial

@@ -6,6 +6,7 @@ import "./globals.css";
 
 import { cn } from "@/lib/utils";
 import GoogleApi from "@/components/layout/google-api";
+import Footer from "@/components/layout/footer";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -33,7 +34,7 @@ export default function RootLayout({
       </head>
       <body
         className={cn(
-          "bg-background font-sans antialiased flex flex-col",
+          "bg-background font-sans antialiased flex flex-col pb-56",
           fontSans.variable
         )}
       >
@@ -45,6 +46,7 @@ export default function RootLayout({
         >
           <Header />
           <main>{children}</main>
+          <Footer />
         </ThemeProvider>
       </body>
     </html>
