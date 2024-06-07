@@ -1,8 +1,10 @@
-"use client";
-
 import CommonDisplayCard from "./common-display-card";
-import { Button } from "@/components/shadcn/button";
+import { Button } from "../shadcn/button";
 import Image from "next/image";
+import { Input } from "../shadcn/input";
+import { WandSparkles } from "lucide-react";
+import Link from "next/link";
+import { BLOG_PRODUCT_URL } from "@/constants/home";
 
 const styles = {
   border: "double transparent",
@@ -18,8 +20,8 @@ export default function SeoEnhancementBlock() {
       <CommonDisplayCard
         type="light"
         className="bg-card-main bg-[#EFEAFF] w-[386px] flex-shrink-0 overflow-hidden"
-        desc="Competitive characteristics, competitive keywords"
-        title="technical SEO"
+        desc="Focus on enhancing crawlability, site speed, and secure navigation to improve SEO outcomes."
+        title="Technical SEO"
       >
         <div className="relative">
           <Image
@@ -94,31 +96,38 @@ export default function SeoEnhancementBlock() {
           </div>
         </div>
       </CommonDisplayCard>
+
       <CommonDisplayCard
         type="dark"
         className="overflow-hidden relative flex-1 flex-shrink-0 w-[488px]"
-        desc="Competitive characteristics, competitive keywords"
-        title="On-page SEO"
+        desc="Improve SERP rankings with strategic use of title tags, H-tags, and quality content that satisfies searcher intent."
+        title="On-Page SEO"
       >
         <div className="flex-1 relative">
-          <div className="absolute z-10 h-[148px] w-[338px] bg-white-50 backdrop-blur-custom-blur shadow-table-gradient rounded-[14px] p-3 top-0 right-0">
-            <div className="text-xs text-primary font-bold">Write with AI</div>
+          <div className="absolute z-10 bg-white-50 backdrop-blur-custom-blur shadow-table-gradient rounded-[14px] p-3 top-0 right-0">
+            <div className="text-xs text-[#805fff] font-bold">
+              Write with AI
+            </div>
             <div
               style={styles}
-              className="mt-3.5 h-12 flex items-center text-xs font-medium text-second gap-2 rounded-lg"
+              className="mt-3.5 h-12 flex items-center text-sm font-medium text-second gap-2 rounded-lg"
             >
-              <span className="ml-2.5">Create a blog based on the keyword</span>
-              <input
-                className="w-[60px] h-[30px] bg-[#f8f8f8] rounded-[4px] border border-[rgba(0,0,0,0.08)]"
+              <span className="ml-2">Create a blog based on the keyword</span>
+              <Input
+                className="w-[60px] h-[30px] rounded-[4px] border-gray-300 mr-2"
                 type="text"
               />
             </div>
             <div className="flex justify-end mt-2">
-              <Button
-                className="w-[90px] h-[28px] rounded-lg"
-                variant={"colorful"}
-              >
-                Generate
+              <Button variant={"colorful"} size={"sm"}>
+                <Link
+                  className="font-semibold whitespace-nowrap gap-2 w-full h-full flex justify-center items-center"
+                  target="_blank"
+                  href={BLOG_PRODUCT_URL}
+                >
+                  <WandSparkles size={12} />
+                  Generate
+                </Link>
               </Button>
             </div>
           </div>
@@ -142,11 +151,12 @@ export default function SeoEnhancementBlock() {
           </div>
         </div>
       </CommonDisplayCard>
+
       <CommonDisplayCard
         type="light"
         className="border w-[285px] flex-shrink-0 overflow-hidden"
-        desc="Competitive characteristics, competitive keywords"
-        title="metadata"
+        desc="Expand your site's influence through authoritative backlinks, social media presence, and influencer marketing. "
+        title="Off-Page SEO"
       >
         <div className="flex-1 relative">
           <div className="absolute left-2.5 top-1.5 w-[282px] h-[384px] rounded-[20px] border-8 border-white-15">

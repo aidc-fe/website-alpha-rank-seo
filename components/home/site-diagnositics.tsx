@@ -2,7 +2,7 @@ import { Check, LoaderCircle } from "lucide-react";
 import GradientIcon from "../ui/gradient-icon";
 import CommonDisplayCard from "./common-display-card";
 import Image from "next/image";
-import { cn } from "@/lib/utils";
+import { cn } from "../../lib/utils";
 
 export default function SiteDiagnostics() {
   return (
@@ -24,7 +24,7 @@ export default function SiteDiagnostics() {
 
       <CommonDisplayCard
         innerClassName="flex flex-col gap-2 pb-0"
-        title={"Now it’s our turn"}
+        title={"SEO Evaluations"}
       >
         <>
           {TOP_RIGHT_DATA.map((item, ind) => {
@@ -74,7 +74,7 @@ export default function SiteDiagnostics() {
       <CommonDisplayCard
         className="col-span-2"
         innerClassName="pb-0 relative"
-        title={"Lighthouse Scores"}
+        title={"Quality Assessments"}
         desc="Out of the box, websites created are optimized for fast loading times, efficient use of resources, and a great user experience, leading to high scores on Google Lighthouse."
       >
         <div className="flex">
@@ -87,14 +87,14 @@ export default function SiteDiagnostics() {
           />
           <CommonDisplayCard
             type="light"
-            className="rounded-b-none z-10 absolute left-[660px] bottom-0 mr-4 h-72"
+            className="rounded-b-none z-10 absolute left-[640px] bottom-0 mr-4 h-72 shadow"
             innerClassName="grid grid-cols-3 pb-2 gap-2"
           >
             <>
               {BOTTOM_CARD_DATA.map((item) => {
-                const { score, title, desc, list } = item;
+                const { score, title, list } = item;
                 return (
-                  <div key={title} className="flex flex-col gap-1 items-center">
+                  <div key={title} className="flex flex-col gap-3 items-center">
                     <div
                       className={
                         "w-[80px] h-[80px] rounded-full bg-gradient-to-br from-[#3977FF] to-[#EE50D5] justify-center flex items-center"
@@ -104,19 +104,20 @@ export default function SiteDiagnostics() {
                         {score}
                       </div>
                     </div>
-                    <div className="text-base text-[#191919] font-medium">
+                    <div className="text-base text-[#191919] whitespace-nowrap font-medium">
                       {title}
                     </div>
-                    <div
-                      className={"text-xs text-[#191919] text-center mb-2 h-8"}
-                    >
-                      {desc}
-                    </div>
                     <ul
-                      className={"text-[10px] text-primary flex flex-col gap-1"}
+                      className={
+                        "text-xs text-primary mt-2 flex flex-col gap-1.5"
+                      }
                     >
                       {list.map((i) => {
-                        return <li key={i}>· {i}</li>;
+                        return (
+                          <li className="whitespace-nowrap" key={i}>
+                            · {i}
+                          </li>
+                        );
                       })}
                     </ul>
                   </div>
@@ -132,29 +133,28 @@ export default function SiteDiagnostics() {
 
 const TOP_RIGHT_DATA = [
   {
-    title: "Technical SEO 诊断……",
+    title: "Technical SEO Health Checking...",
     list: [
       {
-        label:
-          'Has a tag containing widthorinitial-scale<meta name="viewport">',
+        label: "Robots.txt is effective",
         score: 100,
       },
       {
-        label: "Content of blog need to be optimized",
+        label: "The page returned a valid HTTP status code",
         score: 82,
       },
       {
-        label: "The document has a meta description",
+        label: "The document has a meta description ",
         score: 72,
       },
       {
-        label: "The document contains <title>elements",
+        label: "Tag with width or initial-scale",
         score: 21,
       },
     ],
   },
   {
-    title: "On-page SEO 诊断……",
+    title: "On-Page SEO Quality Reviewing...",
     list: [],
   },
 ];
@@ -162,28 +162,34 @@ const BOTTOM_CARD_DATA = [
   {
     score: 100,
     title: "SEO Perfomance",
-    desc: "Refer to Google Search Essentials ",
+    // desc: "Refer to Google Search Essentials ",
     list: [
-      "If Googlebot can find and access your page",
-      "Not an error page",
-      "Alt tags",
-      "Mobile Friendliness",
+      "Robots.txt is effective",
+      "HTTP status code is valid",
+      "Tag with width",
+      "Tag with initial-scale",
     ],
   },
   {
     score: 95,
     title: "Content Quality",
-    desc: "Refer to Google's EEAT evaluation",
-    list: ["Keywords Density", "Length", "Images", "H1-H3 tags"],
+    list: [
+      "Content Relevance",
+      "Enhanced Richness",
+      "Keywords Density",
+      "Adapted Images Display",
+      "H1-H3 Tags",
+    ],
   },
   {
     score: 99,
-    title: "Keywords Quality",
-    desc: "Refer to User Data",
+    title: "Keywords Strategies",
     list: [
-      "Search Volume/Keyword Competition/Relevance",
-      "CTR/CVR",
-      "HLanding Page Experience/Predictive Estimated CTR/Predictive Estimated CVR",
+      "Monthly Search Volume",
+      "Competition Intensity",
+      "Keywords Relevance",
+      "User Engagement Data",
+      "Landing Page Experience",
     ],
   },
 ];

@@ -15,15 +15,15 @@ const WHY_CHOOSE_LIST = [
   },
   {
     icon: "scanSearch",
-    title: "350%",
+    title: "50%",
     secTitle: "Greater Precision",
-    desc: "Master SEO effortlessly with one-click; our fully-managed service dramatically streamlines operations, boosting productivity and enabling a sharper focus on strategic objectives.",
+    desc: "Elevate your SEO with AlphaRank's advanced algorithms and GPT-4 TURBO integration, enhancing semantic analysis precision by 50% for sharper keyword insights and tactics.",
   },
   {
     icon: "mousePointerClick",
     title: "1-Click",
     secTitle: "Efficiency",
-    desc: "Elevate your SEO with AlphaRank's advanced algorithms and GPT-4 TURBO integration, enhancing semantic analysis precision by 50% for sharper keyword insights and tactics.",
+    desc: "Master SEO effortlessly with one-click; our fully-managed service dramatically streamlines operations, boosting productivity and enabling a sharper focus on strategic objectives.",
   },
 ];
 

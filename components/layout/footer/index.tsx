@@ -1,19 +1,24 @@
-import { Logo_Icon } from "@/constants/home";
+import { Logo_Icon } from "../../../constants/home";
 import Link from "next/link";
 import Image from "next/image";
-import { Button } from "@/components/shadcn/button";
+import { Button } from "../../shadcn/button";
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "@/components/shadcn/tooltip";
+} from "../../shadcn/tooltip";
+import { Mail } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="grid grid-cols-7 gap-24 max-w-[1200px] mx-auto">
-      <div className="flex flex-col gap-5 col-span-3">
+    <footer className="grid mt-20 grid-cols-5 gap-10 max-w-[1200px] mx-auto">
+      <div className="flex flex-col gap-5 col-span-2">
         {Logo_Icon}
+        <div className="font-medium mb-1">
+          Your Ultimate One-Click Tool for Traffic Acquisition.
+        </div>
+
         <Link
           href={
             "https://www.producthunt.com/posts/alpharank?utm_source=badge-top-post-badge&utm_medium=badge&utm_souce=badge-alpharank"
@@ -55,10 +60,16 @@ export default function Footer() {
           })}
         </div>
 
-        <div className="text-xl font-medium my-4">
-          Your Ultimate One-Click Tool for Traffic Acquisition.
-        </div>
-
+        <Button variant={"link"} className="w-min pl-0 text-white">
+          <Link
+            className="flex gap-2 items-center"
+            target="_blank"
+            href={`https://mail.google.com/mail/?view=cm&fs=1&to=support@alpha-rank.com`}
+          >
+            <Mail size={20} />
+            <span>support@alpha-rank.com</span>
+          </Link>
+        </Button>
         <div className={"opacity-50 text-base"}>
           © 2024 Vision-Edgeshop，inc.
         </div>
@@ -68,18 +79,23 @@ export default function Footer() {
         const { title, list } = group;
         return (
           <div key={title} className={"flex flex-col gap-5"}>
-            <div className={"text-xl font-bold mb-2 capitalize"}>{title}</div>
+            <div className={"text-xl font-bold capitalize"}>{title}</div>
             {list.map((item) => {
-              const { label, link } = item;
+              const { label, link, noBlank } = item;
               return (
-                <Link
-                  target="_blank"
+                <Button
+                  variant={"link"}
                   key={label}
-                  href={link}
-                  className={"opacity-50 capitalize"}
+                  className="text-white pl-0 w-min"
                 >
-                  {label}
-                </Link>
+                  <Link
+                    target={noBlank ? "" : "_blank"}
+                    href={link}
+                    className={"opacity-70 capitalize"}
+                  >
+                    {label}
+                  </Link>
+                </Button>
               );
             })}
           </div>
@@ -88,18 +104,42 @@ export default function Footer() {
     </footer>
   );
 }
-
 const Footer_Links = [
   {
-    title: "blog",
+    title: "Feature",
     list: [
-      { label: "home", link: "" },
-      { label: "F.A.Q", link: "" },
+      { label: "Technical SEO Audit", link: "/", noBlank: true },
+      {
+        label: "On-Page SEO Audit",
+        link: "/",
+        noBlank: true,
+      },
+      { label: "Content Auto-Generation", link: "/", noBlank: true },
+      { label: "Full-Hosted Management", link: "/", noBlank: true },
+      { label: "Keywords Ranking Monitor", link: "/", noBlank: true },
     ],
   },
-  { title: "feature", list: [{ label: "home", link: "" }] },
-  { title: "partner", list: [{ label: "home", link: "" }] },
-  { title: "alphaRank", list: [{ label: "home", link: "" }] },
+
+  {
+    title: "AlphaRank",
+    list: [
+      { label: "Pricing", link: "/pricing", noBlank: true },
+      { label: "Contact", link: "/contact", noBlank: true },
+      { label: "Blog", link: "/blog", noBlank: true },
+      {
+        label: "Privacy Policy",
+        link: "https://terms.alicdn.com/legal-agreement/terms/privacy_policy_full/20231109180939630/20231109180939630.html",
+      },
+      {
+        label: "Terms of Use",
+        link: "https://terms.alicdn.com/legal-agreement/terms/b_platform_service_agreement/20231110160335349/20231110160335349.html",
+      },
+    ],
+  },
+  {
+    title: "Partner",
+    list: [{ label: "Pic Copilot", link: "https://www.piccopilot.com/" }],
+  },
 ];
 
 const Social_Info = [
